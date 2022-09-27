@@ -2,7 +2,7 @@
 # Repositório público de Lucas Vitor Ferreira Santos
 
 ## Sites:
-* [Android](https://lucasact4.github.io/site-teste/)
+* [Android](https://lucasact4.github.io/cursos/Exercicios-HTML5-CSS3/mini-projetos/android/)
 * [Social](https://lucasact4.github.io/cursos/Exercicios-HTML5-CSS3/mini-projetos/social/)
 * [Cordel](https://lucasact4.github.io/cursos/Exercicios-HTML5-CSS3/mini-projetos/cordel/)
 * [Curriculo](https://lucasact4.github.io/Exercicios-ETE/HTML%20&%20CSS/Curr%C3%ADculo/)
