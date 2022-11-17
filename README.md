@@ -1,3 +1,4 @@
+lang=pt-BR
 # lucasact4.github.io
 # Repositório público de Lucas Vitor Ferreira Santos
 
