@@ -1,6 +1,6 @@
 # [lucasact4.github.io](https://lucasact4.github.io/)
 # Repositório público de Lucas Vitor Ferreira Santos
-## [GitHub](https://github.com/lucasact4)
+## Meu [GitHub](https://github.com/lucasact4)
 
 ## Sites:
 * [Android](https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/android/)
