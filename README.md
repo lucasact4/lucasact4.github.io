@@ -12,3 +12,4 @@
 * [Projeto Pessoal](https://lucasact4.github.io/Projects/Funcraft%202.0/)
 * [React Basic Project](https://vocal-bonbon-9ae370.netlify.app/)
 * [ChatBot Portinho ETE](https://lucasact4.github.io/Projects/Portinho/)
+* :)
