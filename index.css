@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+}
+
+.roboto-style-font {
+    font-family: "Roboto";
+}
+
+.pg-default-width {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.background-image-style {
+    background-image: url(images/background.png);
+    background-position: 50%;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem 2rem;
+    display: flex;
+    box-shadow: 0 -10px 10px -5px #0006,0 0 10px #0006;
+}
+
+.profile-card {
+    text-align: center;
+    border-radius: 10px;
+    width: 25rem;
+    padding: 20px;
+    box-shadow: 0 4px 6px #0006;
+}
+
+.profile-image-card {
+    background-color: #1b1ffd;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    transition: all .3s;
+    display: block;
+    box-shadow: 0 0 10px #0000001a;
+}
+
+.profile-card-avatar .profile-image-card:hover {
+    transform: scale(1.2);
+}
+
+.subtitle-h1 {    
+    margin-bottom: 5px;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.subtitle-h2 {
+    color: #000;
+    opacity: .8;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.section_h3 {
+    border-bottom: 1px solid #a8a8a8;
+    padding-bottom: 8px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.social-links {
+    justify-content: space-around;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sectiontwo {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.sectiontwo__title {
+    border-bottom: 1px solid #a8a8a8;
+    padding-bottom: 8px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.sectiontwo__badges {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sectiontwo__icon-container {
+    cursor: grab;
+    cursor: crosshair;
+    margin: 1rem auto 1.8rem;
+    padding: .6rem;
+    display: inline-block;
+    position: relative;
+}
+
+.sectiontwo__language-icon {
+    transition: transform 1s;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.sectiontwo__language-name {
+    color: #fff;
+    opacity: 0;
+    background-image: url(https://profile-in-banners.vercel.app/viewer/source/images/25.png);
+    background-position: 50%;
+    border-radius: 8px;
+    margin-top: 6px;
+    padding: 5px;
+    font-size: 1.1rem;
+    transition: opacity .3s, transform .3s;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.soft-skills {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.soft-skills .skill-button {
+    cursor: crosshair;
+    color: #000;
+    background-color: #0000;
+    border: 1px solid #a8a8a8;
+    border-radius: 25px;
+    margin: .5rem 2rem;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+
+.executed-projects {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.executed-projects__title {
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 2rem;
+    padding-bottom: 8px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.executed-projects .project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: .5rem;
+    transition: transform .3s;
+    box-shadow: 0 4px 6px #0006;
+}
+
+.executed-projects .project-card .card-img-top {
+    border-radius: 12px 12px 0 0;
+}
+
+.executed-projects .project-card .card-body {
+    padding: 1.5rem;
+}
+
+.areas-atuacao {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.areas-atuacao__title {
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 2rem;
+    padding-bottom: 8px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.areas-atuacao .card {
+    cursor: crosshair;
+    background-image: url(https://profile-in-banners.vercel.app/viewer/source/images/25.png);
+    background-position: 50%;
+    border: none;
+    border-radius: 12px;
+}
+
+.areas-atuacao .card-body {
+    padding: 8px;
+}
+
+.areas-atuacao .card .card-title {
+    color: #fff;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.footer {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px 12px 0 0;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.footer a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer__title {
+    border-top: 1px solid #a8a8a8;
+    margin: 0 auto;
+    padding-top: 12px;
+    font-size: 1rem;
+}
+
+.footer__social-links {
+    justify-content: center;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.footer__copy {
+    color: #000;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+.footer a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer__social-links li {
+    margin-right: 1rem;
+}
