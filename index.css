@@ -50,7 +50,6 @@ li {
 }
 
 .profile-image-card {
-    background-color: #400096;
     border: 3px solid #000;
     border-radius: 50%;
     width: 100px;
@@ -400,4 +399,69 @@ img {
     opacity: .9;
     text-align: justify;
     font-size: 1rem;
+}
+
+.glass-shine-effect-profile {
+    margin: 0 auto;
+    background-color: #400096;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 200ms ease;
+    overflow: hidden;
+}
+
+.glass-shine-effect-profile::before {
+    content: "";
+    position: absolute;
+    height: 150%;
+    width: 50px;
+    transform: rotate(30deg);
+    background-color: rgba(255, 255, 255, 0.2);
+    left: -100px;
+}
+.glass-shine-effect-profile:hover {
+    transform: scale(1.1);
+}
+.glass-shine-effect-profile:hover::before {
+    transition: left 500ms ease;
+    left: 170px;
+}
+
+.glass-shine-effect {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: transform 200ms ease;
+    overflow: hidden;
+}
+
+.glass-shine-effect:before {
+    content: "";
+    position: absolute;
+    height: 150%;
+    width: 100px;
+    transform: rotate(30deg);
+    background-color: rgba(255, 255, 255, 0.2);
+    left: -200px;
+}
+
+.project-card:hover .glass-shine-effect:before {
+    transition: left 600ms ease;
+    left: 700px;
 }
