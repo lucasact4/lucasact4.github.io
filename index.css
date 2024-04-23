@@ -143,7 +143,7 @@ img {
 .sectiontwo__language-name {
     color: #fff;
     opacity: 0;
-    background-image: url(https://profile-in-banners.vercel.app/viewer/source/images/25.png);
+    background-image: url(images/background.png);
     background-position: 50%;
     border-radius: 8px;
     margin-top: 6px;
@@ -177,6 +177,12 @@ img {
     margin: .5rem 3px;
     padding: 12px 20px;
     font-weight: 700;
+}
+
+.soft-skills .skill-button:hover {
+    background-image: url(images/background.png);
+    background-position: 50%;
+    color: white;
 }
 
 .skill-button i::before, .card-body i::before {
@@ -220,6 +226,20 @@ img {
     padding: 1.5rem;
 }
 
+.executed-projects .project-card .card-body .btn {
+    background-image: url(images/background.png);
+    background-position: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #00000000;
+}
+
+.executed-projects .project-card .card-body .btn:hover {
+    background-position: 80%;
+    border: 1px solid rgb(0, 132, 255);
+    letter-spacing: 0.2px;
+}
+
 .areas-atuacao {
     text-align: center;
     background-color: #fff;
@@ -242,10 +262,17 @@ img {
 
 .areas-atuacao .card {
     cursor: crosshair;
-    background-image: url(https://profile-in-banners.vercel.app/viewer/source/images/25.png);
+    background-image: url(images/background.png);
     background-position: 50%;
     border: none;
     border-radius: 12px;
+    border: 1px solid #00000000;
+}
+
+.areas-atuacao .card:hover {
+    background-position: 100% 100%;
+    border: 1px solid rgb(0, 132, 255);
+    letter-spacing: 0.2px;
 }
 
 .areas-atuacao .card-body {
