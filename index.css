@@ -170,6 +170,20 @@ img {
     transform: translate(-50%);
 }
 
+.with-heart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.with-heart i {
+    color: red;
+    padding: 0 5px;
+}
+
+.with-heart i::before {
+    vertical-align: -.20rem !important;
+}
+
 .sectiontwo__language-icon:hover ~ .sectiontwo__language-name {
     opacity: 1;
 }
