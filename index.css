@@ -31,7 +31,7 @@ li {
 }
 
 .background-image-style {
-    background-image: url(images/background.png);
+    background-image: url(images/background3.png);
     background-position: 50%;
     background-size: cover;
     justify-content: center;
@@ -50,7 +50,7 @@ li {
 }
 
 .profile-image-card {
-    background-color: #1b1ffd;
+    background-color: #400096;
     border: 3px solid #000;
     border-radius: 50%;
     width: 100px;
