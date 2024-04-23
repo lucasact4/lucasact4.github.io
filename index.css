@@ -172,7 +172,6 @@ img {
 
 .with-heart {
     display: flex;
-    justify-content: space-between;
 }
 
 .with-heart i {
