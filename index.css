@@ -174,9 +174,14 @@ img {
     background-color: #0000;
     border: 1px solid #a8a8a8;
     border-radius: 25px;
-    margin: .5rem 2rem;
+    margin: .5rem 3px;
     padding: 12px 20px;
     font-weight: 700;
+}
+
+.skill-button i::before, .card-body i::before {
+    vertical-align: -.125rem !important;
+    padding: 3px;
 }
 
 .executed-projects {
@@ -298,4 +303,22 @@ img {
 
 .footer__social-links li {
     margin-right: 1rem;
+}
+
+.executed-projects .project-card .card-body .card-text1 {
+    opacity: .7;
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.executed-projects .project-card .card-body .card-text2 {
+    text-align: left;
+    opacity: .9;
+}
+
+.executed-projects .project-card .card-body .card-text3 {
+    opacity: .9;
+    text-align: justify;
+    font-size: 1rem;
 }
