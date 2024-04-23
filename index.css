@@ -208,11 +208,13 @@ img {
     margin: .5rem 3px;
     padding: 12px 20px;
     font-weight: 700;
+    background-position: 50%;
+    transition: .3s ease-in-out, color .0s ease-in-out;
 }
 
 .soft-skills .skill-button:hover {
     background-image: url(images/background.png);
-    background-position: 50%;
+    background-position: 75%;
     color: white;
 }
 
@@ -245,8 +247,13 @@ img {
     background-color: #fff;
     border-radius: 12px;
     margin-bottom: .5rem;
-    transition: transform .3s;
+    transition: transform .3s, box-shadow .3s;
     box-shadow: 0 4px 6px #0006;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.384);
 }
 
 .executed-projects .project-card .card-img-top {
@@ -262,13 +269,15 @@ img {
     background-position: 50%;
     font-size: 1rem;
     font-weight: 500;
+    transition: .3s ease-in-out;
     border: 1px solid #00000000;
 }
 
 .executed-projects .project-card .card-body .btn:hover {
     background-position: 80%;
     border: 1px solid rgb(0, 132, 255);
-    letter-spacing: 0.2px;
+    transform: scale(1.02);
+    letter-spacing: 0.1px;
 }
 
 .areas-atuacao {
@@ -298,11 +307,13 @@ img {
     border: none;
     border-radius: 12px;
     border: 1px solid #00000000;
+    transition: transform .3s;
 }
 
 .areas-atuacao .card:hover {
     background-position: 100% 100%;
     border: 1px solid rgb(0, 132, 255);
+    transform: scale(1.04);
     letter-spacing: 0.2px;
 }
 
