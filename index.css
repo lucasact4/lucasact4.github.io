@@ -93,6 +93,16 @@ li {
     display: flex;
 }
 
+.social-links li img {
+    width: 35px;
+    margin-bottom: 1rem;
+    transition: all .3s;
+}
+
+.social-links li img:hover {
+    transform: scale(1.4);
+}
+
 .sectiontwo {
     text-align: center;
     background-color: #fff;
@@ -127,6 +137,10 @@ li {
     position: relative;
 }
 
+.sectiontwo__language-icon:hover {
+    transform: rotateY(360deg);
+}
+
 .sectiontwo__language-icon {
     transition: transform 1s;
 }
@@ -154,6 +168,10 @@ img {
     top: 100%;
     left: 50%;
     transform: translate(-50%);
+}
+
+.sectiontwo__language-icon:hover ~ .sectiontwo__language-name {
+    opacity: 1;
 }
 
 .soft-skills {
@@ -330,6 +348,16 @@ img {
 
 .footer__social-links li {
     margin-right: 1rem;
+}
+
+.footer__social-links li img {
+    width: 30px;
+    height: 30px;
+    transition: transform .3s;
+}
+
+.footer__social-links li img:hover {
+    transform: scale(1.4);
 }
 
 .executed-projects .project-card .card-body .card-text1 {
