@@ -390,6 +390,66 @@ img {
     font-size: 1rem;
 }
 
+.card-text-more {
+    opacity: .7;
+    margin-bottom: 0 !important;
+    padding: 4px;
+    font-size: 1rem;
+}
+
+.accordion-button-project:not(.collapsed)::after {
+    background-image: url(images/chevron-compact-up.svg);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.accordion-button-project::after {
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    content: "";
+    margin: 0 auto;
+    background-image: url(images/chevron-compact-up.svg);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordion-button-project {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: var(--bs-accordion-btn-color);
+    text-align: center;
+    background-color: var(--bs-accordion-btn-bg);
+    border-radius: 12px !important;
+    overflow-anchor: none;
+    transition: var(--bs-accordion-transition);
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+}
+
+#collapseOne {
+    padding: 0 !important;
+}
+
+.accordion-body .card-body {
+    padding: 2px 12px 12px 12px !important;
+}
+
+.accordion-body {
+    padding: 0 !important;
+}
+
+.accordion {
+    border: none;
+    border-radius: 12px !important;
+}
+
 .executed-projects .project-card .card-body .card-text2 {
     text-align: left;
     opacity: .9;
