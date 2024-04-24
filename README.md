@@ -17,6 +17,11 @@ Meu [Portfolio](https://lucasact4.github.io/)
 - Nos Desafios Executados, quando clicar na imagem do desafio, abrir o accordion e destacar o botão de acessar desafio.
 - Ao passar o mouse em cima cada item de contato, mostrar um modalzinho personalizado com o nome do contato.
 - Adicionar Easter Egg simples no portfolio atrás de um background para aparecer quando passar mouse em cima.
+- Remover tecnologias em desuso, PHP, PYTHON... Adicionar mais impostantes, Docker, GitLab.
+- Trocar Executados para Desenvolvidos.
+- Ordenar Technical Skills na ordem mais relevante.
+- Ordenar Projetos por ordem de mais importante.
+- Tentar encontrar uma cor de fundo diferente.
 
 *Checklist Projetos Atuais:*
 - Projeto Social: Atualizar as redes sociais e mudar estilização, deixando mais dinamico e ativo.
