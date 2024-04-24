@@ -398,7 +398,7 @@ img {
 }
 
 .accordion-button-project:not(.collapsed)::after {
-    background-image: url(images/chevron-compact-up.svg);
+    background-image: url(images/chevron-compact-down.svg);
     transform: var(--bs-accordion-btn-icon-transform);
 }
 
@@ -407,7 +407,7 @@ img {
     height: var(--bs-accordion-btn-icon-width);
     content: "";
     margin: 0 auto;
-    background-image: url(images/chevron-compact-up.svg);
+    background-image: url(images/chevron-compact-down.svg);
     background-repeat: no-repeat;
     background-size: var(--bs-accordion-btn-icon-width);
     transition: var(--bs-accordion-btn-icon-transition);
