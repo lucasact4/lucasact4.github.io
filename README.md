@@ -15,6 +15,8 @@ Meu [Portfolio](https://lucasact4.github.io/)
 - Melhorar o background de fundo do Header.
 - Nos Projetos Executados, quando clicar na imagem do projeto, destacar o botão de acessar projeto.
 - Nos Desafios Executados, quando clicar na imagem do desafio, abrir o accordion e destacar o botão de acessar desafio.
+- Ao passar o mouse em cima cada item de contato, mostrar um modalzinho personalizado com o nome do contato.
+- Adicionar Easter Egg simples no portfolio atrás de um background para aparecer quando passar mouse em cima.
 
 *Checklist Projetos Atuais:*
 - Projeto Social: Atualizar as redes sociais e mudar estilização, deixando mais dinamico e ativo.
