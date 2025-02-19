@@ -3,7 +3,7 @@
 Meu [Portfolio](https://lucasact4.github.io/)
 
 *Checklist Melhorias Portfolio:*
-- Entre os botões de Linkedin, Github, etc.. Adicionar também link de PDF do currículo atualizado. header e footer.
+- Converter CSS para SASS
 - Na Technical Skills diminuir os confetes nas tecnologias e adicionar acionamento no hover.
 - Na Technical Skills também, remover o mouse '+' e deixa-lo normal.
 - Na Technical Skills também, adicionar emojis de coração entre os confetes das tecnologias preferidas.
@@ -23,6 +23,7 @@ Meu [Portfolio](https://lucasact4.github.io/)
 - Ordenar Projetos por ordem de mais importante.
 - Tentar encontrar uma cor de fundo diferente.
 - Na parte de Technical Skills separar as tecnologias em "Tecnologias com mais experiência", "Tecnologias pouco utilizadas" e "Tecnologias com interesse".
+- Verificar a possibilidade de adicionar Tooltips em certos locais
 
 *Checklist Projetos Atuais:*
 - Projeto Social: Atualizar as redes sociais e mudar estilização, deixando mais dinamico e ativo.

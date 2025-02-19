@@ -530,3 +530,8 @@ img {
     transition: left 600ms ease;
     left: 700px;
 }
+
+.cv-width>a>img {
+    width: 34px;
+    opacity: 95%;
+}
