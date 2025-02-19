@@ -4,12 +4,7 @@ Meu [Portfolio](https://lucasact4.github.io/)
 
 *Checklist Melhorias Portfolio:*
 - Trocar a foto de perfil para uma mais formal(tirar uma atual).
-- Melhorar o background de fundo do Header.
-- Ao passar o mouse em cima cada item de contato, mostrar um modalzinho personalizado com o nome do contato(Tooltip).
 - Adicionar Easter Egg simples no portfolio atrás de um background para aparecer quando passar mouse em cima(Coisas do Minecraft, Animes, Jogos).
-
-- Ordenar Projetos por ordem de mais importante.
-- Tentar encontrar uma cor de fundo diferente(Gelo?).
 
 - Ordenar Technical Skills na ordem mais relevante.
 - Na parte de Technical Skills separar as tecnologias em "Tecnologias com mais experiência", "Tecnologias pouco utilizadas" e "Tecnologias com interesse".

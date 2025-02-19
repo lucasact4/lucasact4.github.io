@@ -48,15 +48,28 @@ img {
 
 // HEADER STYLES
 .background-image-style {
-    background-image: url(/images/background3.png);
+    background-image: url(/images/background4.jpg);
     background-position: 50%;
     background-size: cover;
     justify-content: center;
     align-items: center;
-    padding: 3rem 3rem 2rem;
+    padding: 3rem 3rem 4rem 3rem;
     display: flex;
     box-shadow: 0 -10px 10px -5px #0006,0 0 10px #0006;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: -10px;
+        background: inherit;
+        filter: blur(3px);
+        transform: scale(1.1);
+        z-index: 0;
+    }
     .profile-card {
+        z-index: 1;
+        position: relative;
         text-align: center;
         border-radius: 10px;
         width: 25rem;
@@ -181,7 +194,7 @@ img {
     .skill-button {
         cursor: crosshair;
         color: #000;
-        background-color: #0000;
+        background-color: #ffffff;
         border: 1px solid #a8a8a8;
         border-radius: 25px;
         margin: .5rem 3px;
@@ -489,4 +502,28 @@ $accordion-btn-font-size: 1rem;
 }
 .highlight-btn {
     transform: scale(1.1);
+}
+
+/* Custom Tooltip */
+.custom-tooltip {
+    .tooltip-inner {
+            max-width: 500px;
+            padding: 0.5rem;
+            color: white;
+            border: 1px solid white;
+            font-family: "Rubik", sans-serif;
+            font-weight: 300;
+            font-optical-sizing: auto;
+            font-style: normal;
+            border-radius: 6px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    &.show {
+        opacity: 0.95;
+        transition: opacity .5s ease-in-out;
+    }
+}
+
+.bg-white-page {
+    background-color: #F6F7F9;
 }

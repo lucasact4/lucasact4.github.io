@@ -1,37 +1,38 @@
 function dispararConfete() {
-    var duration = 5 * 1000;
-    var animationEnd = Date.now() + duration;
-    var skew = 1;
-    
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-    
-    (function frame() {
-      var timeLeft = animationEnd - Date.now();
-      var ticks = Math.max(200, 500 * (timeLeft / duration));
-      skew = Math.max(0.8, skew - 0.001);
-    
-      confetti({
-        particleCount: 1,
-        startVelocity: 0,
-        ticks: ticks,
-        origin: {
-          x: Math.random(),
-          // since particles fall down, skew start toward the top
-          y: (Math.random() * skew) - 0.2
-        },
-        colors: ['#ffffff'],
-        shapes: ['circle'],
-        gravity: randomInRange(0.4, 0.6),
-        scalar: randomInRange(0.4, 1),
-        drift: randomInRange(-0.4, 0.4)
-      });
-    
-      if (timeLeft > 0) {
-        requestAnimationFrame(frame);
-      }
-    }());
+  var duration = 5 * 1000;
+  var animationEnd = Date.now() + duration;
+  var skew = 1;
+  
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function frame() {
+    var timeLeft = animationEnd - Date.now();
+    if (timeLeft <= 0) return;
+
+    var ticks = Math.max(100, 300 * (timeLeft / duration)); // Reduzindo os ticks
+    skew = Math.max(0.8, skew - 0.001);
+
+    confetti({
+      particleCount: 2,
+      startVelocity: 0,
+      ticks: ticks,
+      origin: {
+        x: Math.random(),
+        y: (Math.random() * skew) - 0.2
+      },
+      colors: ['#ffffff'],
+      shapes: ['circle'],
+      gravity: randomInRange(0.4, 0.6),
+      scalar: randomInRange(0.4, 1),
+      drift: randomInRange(-0.4, 0.4)
+    });
+
+    setTimeout(() => requestAnimationFrame(frame), 100);
+  }
+
+  frame();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -183,3 +184,15 @@ function highlightButton(card) {
       button.classList.remove('highlight-btn');
   }, 300);
 }
+
+// Loading Tooltip
+document.addEventListener("DOMContentLoaded", function () {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl, {
+          delay: { "show": 0, "hide": 100 },
+          template: '<div class="tooltip custom-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+          offset: [0, 21]
+      });
+  });
+});
