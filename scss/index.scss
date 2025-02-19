@@ -119,8 +119,7 @@ img {
         display: flex;
     }
     .sectiontwo__icon-container {
-        cursor: grab;
-        cursor: crosshair;
+        cursor: pointer;
         margin: 1rem auto 1.8rem;
         padding: .6rem;
         display: inline-block;
@@ -189,16 +188,20 @@ img {
         padding: 12px 20px;
         font-weight: 700;
         background-position: 50%;
+        position: relative;
+        overflow: hidden;
         transition: .3s ease-in-out, color .0s ease-in-out;
-    }
-    .skill-button:hover {
-        background-image: url(/images/background.png);
-        background-position: 75%;
-        color: white;
-    }
-    .skill-button i::before, .card-body i::before {
-        vertical-align: -.125rem !important;
-        padding: 3px;
+        &:hover {
+            background-image: url(/images/background3.png);
+            background-position: 75%;
+            color: white;
+        }
+        i, .card-body i {
+            &::before {
+                vertical-align: -.125rem !important;
+                padding: 3px;
+            }
+        }
     }
 }
 
@@ -294,7 +297,7 @@ img {
     }
     .card {
         cursor: crosshair;
-        background-image: url(/images/background.png);
+        background-image: url(/images/background3.png);
         background-position: 50%;
         border: none;
         border-radius: 12px;
@@ -479,4 +482,11 @@ $accordion-btn-font-size: 1rem;
         background-color: rgba(255, 255, 255, 0.2);
         left: -200px;
     }
+}
+
+#project-btn {
+    transition: transform 0.3s ease-in-out;
+}
+.highlight-btn {
+    transform: scale(1.1);
 }

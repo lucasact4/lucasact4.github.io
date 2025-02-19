@@ -116,8 +116,7 @@ img {
   display: flex;
 }
 .hard-skills .sectiontwo__icon-container {
-  cursor: grab;
-  cursor: crosshair;
+  cursor: pointer;
   margin: 1rem auto 1.8rem;
   padding: 0.6rem;
   display: inline-block;
@@ -185,14 +184,16 @@ img {
   padding: 12px 20px;
   font-weight: 700;
   background-position: 50%;
+  position: relative;
+  overflow: hidden;
   transition: 0.3s ease-in-out, color 0s ease-in-out;
 }
 .soft-skills .skill-button:hover {
-  background-image: url(/images/background.png);
+  background-image: url(/images/background3.png);
   background-position: 75%;
   color: white;
 }
-.soft-skills .skill-button i::before, .soft-skills .card-body i::before {
+.soft-skills .skill-button i::before, .soft-skills .skill-button .card-body i::before {
   vertical-align: -0.125rem !important;
   padding: 3px;
 }
@@ -286,7 +287,7 @@ img {
 }
 .areas-atuacao .card {
   cursor: crosshair;
-  background-image: url(/images/background.png);
+  background-image: url(/images/background3.png);
   background-position: 50%;
   border: none;
   border-radius: 12px;
@@ -458,6 +459,14 @@ img {
   transform: rotate(30deg);
   background-color: rgba(255, 255, 255, 0.2);
   left: -200px;
+}
+
+#project-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight-btn {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=index.css.map */

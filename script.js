@@ -38,28 +38,72 @@ document.addEventListener('DOMContentLoaded', function() {
     dispararConfete();
 });
 
-function dispararConfeteEmCimaDaDiv(elementoClicado) {
-    const rect = elementoClicado.getBoundingClientRect();
+function dispararConfeteEmCimaDaDiv(elementoClicado, comCorações = false) {
+  const rect = elementoClicado.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top;
 
-    const x = rect.left + (rect.width / 2);
-    const y = rect.top;
+  confetti({
+      particleCount: 10,
+      spread: 100,
+      startVelocity: 25,
+      origin: { x: x / window.innerWidth, y: y / window.innerHeight }
+  });
 
-    confetti({
-        particleCount: 50,
-        spread: 50,
-        startVelocity: 20,
-        origin: { x: x / window.innerWidth, y: y / window.innerHeight }
-    });
+  if (comCorações) {
+    dispararEmojisDeCoracao(elementoClicado);
+  }
+}
+
+
+function dispararEmojisDeCoracao(elementoClicado) {
+  const rect = elementoClicado.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+
+  var scalar = 1.5;
+  var heartEmoji = confetti.shapeFromText({ 
+      text: '❤️',  
+      scalar,
+      font: 'bold 28px Arial', 
+      opacity: 0.9
+  });
+
+  var defaults = {
+      spread: 120,
+      ticks: 100,
+      gravity: -0.2,
+      decay: 0.95,
+      startVelocity: 5,
+      shapes: [heartEmoji],
+      scalar
+  };
+
+  function shoot() {
+      confetti({
+          ...defaults,
+          particleCount: 2,
+          origin: { x: x / window.innerWidth, y: y / window.innerHeight }
+      });
+  }
+
+  setTimeout(shoot, 0);
+  setTimeout(shoot, 300);
+  setTimeout(shoot, 600);
+  setTimeout(shoot, 900);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const divsIconContainer = document.querySelectorAll('.sectiontwo__language-icon');
+  const divsIconContainer = document.querySelectorAll('.sectiontwo__icon-container');
 
-    divsIconContainer.forEach(function(divIconContainer) {
-        divIconContainer.addEventListener('click', function(event) {
-            dispararConfeteEmCimaDaDiv(event.currentTarget);
-        });
-    });
+  divsIconContainer.forEach(function(container) {
+      container.addEventListener('click', function(event) {
+          const languageName = container.querySelector('.sectiontwo__language-name');
+          const comCorações = languageName && languageName.classList.contains('with-heart');
+
+          dispararConfeteEmCimaDaDiv(event.currentTarget, comCorações);
+      });
+  });
 });
 
 
@@ -128,4 +172,14 @@ function dispararEmojisNoProfile(elementoClicado) {
   setTimeout(shoot, 0);
   setTimeout(shoot, 100);
   setTimeout(shoot, 200);
+}
+
+function highlightButton(card) {
+  const button = card.querySelector('#project-btn');
+
+  button.classList.add('highlight-btn');
+
+  setTimeout(() => {
+      button.classList.remove('highlight-btn');
+  }, 300);
 }

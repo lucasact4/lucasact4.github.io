@@ -105,6 +105,7 @@
                     </div>
                 </div>
             </section>
+            <hr class="text-white">
             <section class="container mt-3">
                 <div class="bg-white soft-skills text-center">
                     <h3 class="skills__title">Soft Skills</h3>
@@ -142,12 +143,13 @@
                     </div>
                 </div>
             </section>
+            <hr class="text-white">
             <section class="container mt-3">
                 <div class="executed-projects bg-white">
-                    <h2 class="executed-projects__title text-center">Projetos Executados</h2>
+                    <h2 class="executed-projects__title text-center">Projetos Desenvolvidos</h2>
                     <div class="row  justify-content-center">
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/mycraft.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -162,12 +164,12 @@
                                         <i class="bi bi-stack"></i>
                                         <strong> Stacks:</strong> HTML, SASS, Design, UX-UI, Ruby on Rails, Bootstrap.
                                     </p>
-                                    <a href="https://mycraft-rails.fly.dev/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
+                                    <a href="https://mycraft-rails.fly.dev/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/alex-barbearia.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -182,32 +184,12 @@
                                         <i class="bi bi-stack"></i>
                                         <strong> Stacks:</strong> HTML, SASS, Design, UX-UI, Javascript, Bootstrap.
                                     </p>
-                                    <a href="https://lucasact4.github.io/alex-barbearia-landing-page/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
+                                    <a href="https://lucasact4.github.io/alex-barbearia-landing-page/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
-                                <div class="glass-shine-effect">
-                                    <img src="images/social.png" class="card-img-top" alt="Imagem do Projeto">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Social</h5>
-                                    <p class="card-text1">Página com minhas redes sociais</p>
-                                    <p class="card-text2">
-                                        <i class="bi bi-person-square"></i>
-                                        <strong> Atribuições:</strong> Design de imagens, layout, desenvolvimento e implementação.
-                                    </p>
-                                    <p class="card-text3">
-                                        <i class="bi bi-stack"></i>
-                                        <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
-                                    </p>
-                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/social/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/curriculo.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -222,52 +204,12 @@
                                         <i class="bi bi-stack"></i>
                                         <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
                                     </p>
-                                    <a href="https://lucasact4.github.io/Exercicios-ETE/HTML%20&%20CSS/Curr%C3%ADculo/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
+                                    <a href="https://lucasact4.github.io/Exercicios-ETE/HTML%20&%20CSS/Curr%C3%ADculo/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
-                                <div class="glass-shine-effect">
-                                    <img src="images/4craft.png" class="card-img-top" alt="Imagem do Projeto">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">4Craft</h5>
-                                    <p class="card-text1">Landing Page Gamer</p>
-                                    <p class="card-text2">
-                                        <i class="bi bi-person-square"></i>
-                                        <strong> Atribuições:</strong> Design de imagens, layout, desenvolvimento e implementação.
-                                    </p>
-                                    <p class="card-text3">
-                                        <i class="bi bi-stack"></i>
-                                        <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
-                                    </p>
-                                    <a href="https://lucasact4.github.io/Projects/Funcraft%202.0/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="project-card">
-                                <div class="glass-shine-effect">
-                                    <img src="images/chatbot.png" class="card-img-top" alt="Imagem do Projeto">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Portinho</h5>
-                                    <p class="card-text1">ChatBot para atendimento escolar</p>
-                                    <p class="card-text2">
-                                        <i class="bi bi-person-square"></i>
-                                        <strong> Atribuições:</strong> Concepção do projeto, desenvolvimento e implementação, textos, conversa.
-                                    </p>
-                                    <p class="card-text3">
-                                        <i class="bi bi-stack"></i>
-                                        <strong> Stacks:</strong> HTML, CSS, Design, UX-UI, DialogFlow.
-                                    </p>
-                                    <a href="https://lucasact4.github.io/Projects/Portinho/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/aula-interativa.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -282,19 +224,93 @@
                                         <i class="bi bi-stack"></i>
                                         <strong> Stacks:</strong> HTML, CSS, JavaScript, Bootstrap.
                                     </p>
-                                    <a href="https://lucasact4.github.io/UFRPE-education-page-creation-class/" class="btn btn-primary" target="_blank">Acessar Projeto</a>
+                                    <a href="https://lucasact4.github.io/UFRPE-education-page-creation-class/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="project-card" onclick="highlightButton(this)">
+                                <div class="glass-shine-effect">
+                                    <img src="images/4craft.png" class="card-img-top" alt="Imagem do Projeto">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">4Craft</h5>
+                                    <p class="card-text1">Landing Page Gamer</p>
+                                    <p class="card-text2">
+                                        <i class="bi bi-person-square"></i>
+                                        <strong> Atribuições:</strong> Design de imagens, layout, desenvolvimento e implementação.
+                                    </p>
+                                    <p class="card-text3">
+                                        <i class="bi bi-stack"></i>
+                                        <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
+                                    </p>
+                                    <a href="https://lucasact4.github.io/Projects/Funcraft%202.0/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="project-card" onclick="highlightButton(this)">
+                                <div class="glass-shine-effect">
+                                    <img src="images/chatbot.png" class="card-img-top" alt="Imagem do Projeto">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Portinho</h5>
+                                    <p class="card-text1">ChatBot para atendimento escolar</p>
+                                    <p class="card-text2">
+                                        <i class="bi bi-person-square"></i>
+                                        <strong> Atribuições:</strong> Concepção do projeto, desenvolvimento e implementação, textos, conversa.
+                                    </p>
+                                    <p class="card-text3">
+                                        <i class="bi bi-stack"></i>
+                                        <strong> Stacks:</strong> HTML, CSS, Design, UX-UI, DialogFlow.
+                                    </p>
+                                    <a href="https://lucasact4.github.io/Projects/Portinho/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Projeto</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <hr class="text-white">
             <section class="container mt-3">
                 <div class="executed-projects bg-white">
-                    <h2 class="executed-projects__title text-center">Desafios Executados</h2>
+                    <h2 class="executed-projects__title text-center">Desafios Desenvolvidos</h2>
                     <div class="row justify-content-center">
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
+                                <div class="glass-shine-effect">
+                                    <img src="images/social.png" class="card-img-top" alt="Imagem do Projeto">
+                                </div>
+                                <div class="accordion" id="accordionExampleSix">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSix">
+                                            <div class="accordion-button-project collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                            
+                                            </div>
+                                        </h2>
+                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExampleSix">
+                                            <div class="accordion-body">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Social</h5>
+                                                    <p class="card-text1">Página com Redes Sociais</p>
+                                                    <p class="card-text2">
+                                                        <i class="bi bi-file-earmark-code-fill"></i>
+                                                        <strong> Fonte:</strong> <em>Curso em Vídeo</em> - HTML5 & CSS3.
+                                                    </p>
+                                                    <p class="card-text3">
+                                                        <i class="bi bi-stack"></i>
+                                                        <strong> Stacks:</strong> HTML, CSS, Design.
+                                                    </p>
+                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/social/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/android.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -318,7 +334,7 @@
                                                         <i class="bi bi-stack"></i>
                                                         <strong> Stacks:</strong> HTML, CSS.
                                                     </p>
-                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/android/" class="btn btn-primary" target="_blank">Acessar Desafio</a>
+                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/android/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,7 +343,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/cordel.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -351,7 +367,7 @@
                                                         <i class="bi bi-stack"></i>
                                                         <strong> Stacks:</strong> HTML, CSS, Design.
                                                     </p>
-                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/cordel/" class="btn btn-primary" target="_blank">Acessar Desafio</a>
+                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/cordel/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +376,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/login.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -384,7 +400,7 @@
                                                         <i class="bi bi-stack"></i>
                                                         <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
                                                     </p>
-                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/login/" class="btn btn-primary" target="_blank">Acessar Desafio</a>
+                                                    <a href="https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/login/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -393,7 +409,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/landing-page.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -417,7 +433,7 @@
                                                         <i class="bi bi-stack"></i>
                                                         <strong> Stacks:</strong> HTML, CSS, Design, UX-UI.
                                                     </p>
-                                                    <a href="https://lucasact4.github.io/Cursos/ReactJS/HTML5%20&%20CSS3/Landing%20Page/" class="btn btn-primary" target="_blank">Acessar Desafio</a>
+                                                    <a href="https://lucasact4.github.io/Cursos/ReactJS/HTML5%20&%20CSS3/Landing%20Page/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,7 +442,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="project-card">
+                            <div class="project-card" onclick="highlightButton(this)">
                                 <div class="glass-shine-effect">
                                     <img src="images/react-search.png" class="card-img-top" alt="Imagem do Projeto">
                                 </div>
@@ -450,7 +466,7 @@
                                                         <i class="bi bi-stack"></i>
                                                         <strong> Stacks:</strong> HTML, CSS, React.JS.
                                                     </p>
-                                                    <a href="https://vocal-bonbon-9ae370.netlify.app/" class="btn btn-primary" target="_blank">Acessar Desafio</a>
+                                                    <a href="https://vocal-bonbon-9ae370.netlify.app/" class="btn btn-primary" target="_blank" id="project-btn">Acessar Desafio</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -461,6 +477,7 @@
                     </div>
                 </div>
             </section>
+            <hr class="text-white">
             <section class="container mt-3">
                 <div class="areas-atuacao">
                     <h2 class="areas-atuacao__title text-center">Áreas de Atuação</h2>
@@ -505,10 +522,11 @@
                     </div>
                 </div>
             </section>
+            <hr class="text-white">
             <section class="container mt-3">
                 <div class="footer">
                     <div class="row">
-                        <a href="#topo" class="back-to-top pt-3 text-center">↑ Voltar ao topo ↑</a>
+                        <a href="#topo" class="back-to-top pt-3 text-center"><i class="bi bi-arrow-bar-up"></i> Voltar ao topo <i class="bi bi-arrow-bar-up"></i></a>
                         <div class="col-md-12 mt-3">
                             <h2 class="footer__title text-center">CONTATOS</h2>
                             <ul class="footer__social-links">
