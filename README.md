@@ -3,7 +3,6 @@
 Meu [Portfolio](https://lucasact4.github.io/)
 
 *Checklist Melhorias Portfolio:*
-- Converter CSS para SASS
 - Na Technical Skills diminuir os confetes nas tecnologias e adicionar acionamento no hover.
 - Na Technical Skills também, remover o mouse '+' e deixa-lo normal.
 - Na Technical Skills também, adicionar emojis de coração entre os confetes das tecnologias preferidas.
