@@ -120,17 +120,25 @@ img {
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem 5px 1.5rem;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
 }
+.hard-skills .skills__title {
+  border-bottom: 1px solid #a8a8a8;
+  padding-bottom: 8px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
 .hard-skills .sectiontwo__badges {
-  flex-wrap: wrap;
   margin: 0 auto;
-  display: flex;
+}
+.hard-skills .sectiontwo__badges .sectiontwo__subtitle {
+  font-weight: 500;
+  border-bottom: 1px solid #a8a8a8;
 }
 .hard-skills .sectiontwo__icon-container {
   cursor: pointer;
-  margin: 1rem auto 1.8rem;
+  margin: 0 auto 2rem;
   padding: 0.6rem;
   display: inline-block;
   position: relative;
@@ -150,8 +158,7 @@ img {
   background-image: url(/images/background.png);
   background-position: 50%;
   border-radius: 8px;
-  margin-top: 6px;
-  padding: 5px;
+  padding: 2px 5px;
   font-size: 1.1rem;
   transition: opacity 0.3s, transform 0.3s;
   position: absolute;

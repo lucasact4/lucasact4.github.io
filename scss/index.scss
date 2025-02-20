@@ -124,16 +124,24 @@ img {
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem 5px 1.5rem;
     box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+    .skills__title {
+        border-bottom: 1px solid #a8a8a8;
+        padding-bottom: 8px;
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
     .sectiontwo__badges {
-        flex-wrap: wrap;
         margin: 0 auto;
-        display: flex;
+        .sectiontwo__subtitle {
+            font-weight: 500;
+            border-bottom: 1px solid #a8a8a8;
+        }
     }
     .sectiontwo__icon-container {
         cursor: pointer;
-        margin: 1rem auto 1.8rem;
+        margin: 0 auto 2rem;
         padding: .6rem;
         display: inline-block;
         position: relative;
@@ -153,8 +161,7 @@ img {
         background-image: url(/images/background.png);
         background-position: 50%;
         border-radius: 8px;
-        margin-top: 6px;
-        padding: 5px;
+        padding: 2px 5px;
         font-size: 1.1rem;
         transition: opacity .3s, transform .3s;
         position: absolute;
