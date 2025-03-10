@@ -249,6 +249,12 @@ img {
         margin-bottom: .5rem;
         transition: transform .3s, box-shadow .3s;
         box-shadow: 0 4px 6px #0006;
+        .img-executed-challenge {
+            overflow: hidden;
+            height: 50px;
+            position: relative;
+            transition: height 0.5s ease-in-out;
+        }
         &:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.384);
@@ -393,6 +399,10 @@ $accordion-btn-font-size: 1rem;
     border: none;
     border-radius: $accordion-radius !important;
     .accordion-item {
+        .card-title-challeng {
+            font-size: 14px;
+            z-index: 100;
+        }
         &:last-of-type {
             border-bottom-right-radius: $accordion-radius !important;
             border-bottom-left-radius: $accordion-radius !important;
@@ -418,7 +428,7 @@ $accordion-btn-font-size: 1rem;
                 width: var(--bs-accordion-btn-icon-width);
                 height: var(--bs-accordion-btn-icon-width);
                 content: "";
-                margin: 0 auto;
+                margin-left: auto;
                 background-image: url(/images/chevron-compact-down.svg);
                 background-repeat: no-repeat;
                 background-size: var(--bs-accordion-btn-icon-width);

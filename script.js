@@ -196,3 +196,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".accordion-button-project").forEach(button => {
+      button.addEventListener("click", function () {
+          const imgContainer = this.closest(".project-card").querySelector(".img-executed-challenge");
+          
+          if (this.classList.contains("collapsed")) {
+              imgContainer.style.height = "50px";
+          } else {
+              imgContainer.style.height = "167px";
+              
+              const accordionItem = this.closest(".accordion-item");
+              const offset = 200;
+
+              window.scrollTo({
+                  top: accordionItem.getBoundingClientRect().top + window.scrollY - offset,
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+});
