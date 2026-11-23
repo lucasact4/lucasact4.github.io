@@ -1,0 +1,29 @@
+{% assign resume = site.data.resume %}
+<section id="trajetoria" class="trajectory" aria-labelledby="trajectory-title">
+    <div class="trajectory__head">
+        <h2 id="trajectory-title" class="trajectory__title">Trajetória</h2>
+        <div class="trajectory__actions">
+            <a class="hero__action hero__action--primary" href="{{ '/curriculo/' | relative_url }}"><i class="bi bi-file-text" aria-hidden="true"></i> Ver currículo completo</a>
+            <a class="hero__action" href="{{ resume.pdf | relative_url }}" download><i class="bi bi-download" aria-hidden="true"></i> Baixar PDF</a>
+        </div>
+    </div>
+    <ol class="trajectory__list">
+        {% for item in resume.experience %}
+        <li class="trajectory__item">
+            <p class="trajectory__period">{% include components/resume-period.html item=item %}</p>
+            <div>
+                <h3 class="trajectory__role">{{ item.role | escape }} <span class="trajectory__company">· {{ item.company | escape }}</span></h3>
+                <p class="trajectory__summary">{{ item.summary | escape }}</p>
+            </div>
+        </li>
+        {% endfor %}
+        {% assign degree = resume.education | first %}
+        <li class="trajectory__item trajectory__item--education">
+            <p class="trajectory__period">{% include components/resume-period.html item=degree %}</p>
+            <div>
+                <h3 class="trajectory__role">{{ degree.course | escape }} <span class="trajectory__company">· {{ degree.institution | escape }}</span></h3>
+                <p class="trajectory__summary">{{ degree.status | escape }}</p>
+            </div>
+        </li>
+    </ol>
+</section>

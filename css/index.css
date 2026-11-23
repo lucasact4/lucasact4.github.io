@@ -6,6 +6,7 @@ layout: null
 {% include styles/hero-controls.css %}
 {% include styles/hero-responsive.css %}
 {% include styles/skills.css %}
+{% include styles/resume.css %}
 {% include styles/projects.css %}
 {% include styles/areas.css %}
 {% include styles/footer.css %}

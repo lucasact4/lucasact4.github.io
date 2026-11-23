@@ -1,0 +1,2 @@
+{%- assign start = include.item.start | split: "-" -%}
+<span class="resume-period"><time datetime="{{ include.item.start | escape }}">{{ start[1] }}/{{ start[0] }}</time> – {% if include.item.end %}{% assign end = include.item.end | split: "-" %}{% if include.item.status == "Em andamento" %}previsão {% endif %}<time datetime="{{ include.item.end | escape }}">{{ end[1] }}/{{ end[0] }}</time>{% else %}atual{% endif %}</span>
