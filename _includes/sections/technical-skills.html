@@ -1,23 +1,40 @@
-<section class="container">
-    <div class="bg-white-page hard-skills text-center">
-        <h2 class="skills__title">Technical Skills</h2>
-        <div class="sectiontwo__badges d-flex justify-content-center flex-column">
-            {% for group in site.data.skills.technical %}
-            <div{% if forloop.first %} class="mt-2"{% endif %}>
-                <span class="sectiontwo__subtitle">{{ group.title | escape }}</span>
-                <div>
-                    {% for skill in group.items %}
-                    <div class="sectiontwo__icon-container">
-                        <img src="https://skillicons.dev/icons?{{ skill.icon_query | escape }}" alt="{{ skill.alt | escape }}" class="sectiontwo__language-icon" width="48" height="48" loading="lazy">
-                        <span class="sectiontwo__language-name{% if skill.favorite %} with-heart{% endif %}">
-                            {{- skill.label | escape -}}
-                            {% if skill.favorite %}<i class="bi bi-suit-heart-fill" aria-hidden="true"></i>{% endif %}
-                        </span>
-                    </div>
-                    {% endfor %}
-                </div>
+<section class="tech-skills" aria-labelledby="tech-skills-title">
+    <h2 id="tech-skills-title" class="tech-skills__title">Technical Skills</h2>
+    {% assign level_max = 3 %}
+    {% for group in site.data.skills.technical %}
+    <section class="tech-band tech-band--{{ group.id | escape }}" aria-labelledby="tech-band-{{ group.id | escape }}">
+        <div class="tech-band__label">
+            <h3 id="tech-band-{{ group.id | escape }}" class="tech-band__title">{{ group.title | escape }}</h3>
+            <div class="tech-band__meta">
+                {% if group.level %}
+                <span class="tech-band__meter" aria-hidden="true">
+                    {% for step in (1..level_max) %}<span class="tech-band__step{% if step <= group.level %} is-on{% endif %}"></span>{% endfor %}
+                </span>
+                {% endif %}
+                <span class="tech-band__count">{{ group.items | size }} {{ group.unit | default: "tecnologias" | escape }}</span>
             </div>
-            {% endfor %}
         </div>
-    </div>
+        <ul class="tech-band__list">
+            {% for skill in group.items %}
+            <li class="tech-chip sectiontwo__icon-container">
+                {% if skill.icon_query %}
+                <img src="https://skillicons.dev/icons?{{ skill.icon_query | escape }}" alt="" class="tech-chip__icon" width="24" height="24" loading="lazy">
+                {% else %}
+                <span class="tech-chip__icon tech-chip__tile" aria-hidden="true">
+                    {% if skill.logo_url %}
+                    <img src="{{ skill.logo_url | escape }}" alt="" class="tech-chip__logo" width="16" height="16" loading="lazy">
+                    {% else %}
+                    <span class="tech-chip__logo tech-chip__logo--mask" style="--logo: url('{{ skill.logo_mask | escape }}')"></span>
+                    {% endif %}
+                </span>
+                {% endif %}
+                <span class="tech-chip__name{% if skill.favorite %} with-heart{% endif %}">
+                    {{- skill.label | escape -}}
+                    {% if skill.favorite %}<i class="bi bi-suit-heart-fill" aria-hidden="true"></i>{% endif %}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endfor %}
 </section>

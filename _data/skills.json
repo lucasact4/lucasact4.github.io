@@ -1,7 +1,9 @@
 {
   "technical": [
     {
+      "id": "experienced",
       "title": "Experienced With",
+      "level": 3,
       "items": [
         {
           "icon_query": "i=rails",
@@ -14,6 +16,10 @@
           "alt": "Vue",
           "label": "VueJS",
           "favorite": true
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/hotwire",
+          "label": "Hotwire"
         },
         {
           "icon_query": "i=bootstrap",
@@ -44,6 +50,23 @@
           "label": "Ruby"
         },
         {
+          "icon_query": "i=postgres&theme=dark",
+          "alt": "PostgreSQL",
+          "label": "PostgreSQL"
+        },
+        {
+          "icon_query": "i=redis",
+          "label": "Redis"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/sidekiq",
+          "label": "Sidekiq"
+        },
+        {
+          "logo_mask": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/clipboard-check.svg",
+          "label": "RSpec + Capybara"
+        },
+        {
           "icon_query": "i=js",
           "alt": "Javascript",
           "label": "Javascript"
@@ -52,6 +75,10 @@
           "icon_query": "i=git",
           "alt": "Git",
           "label": "Git"
+        },
+        {
+          "icon_query": "i=githubactions",
+          "label": "GitHub Actions"
         },
         {
           "icon_query": "i=vscode&theme=dark",
@@ -76,17 +103,14 @@
       ]
     },
     {
+      "id": "familiar",
       "title": "Familiar With",
+      "level": 2,
       "items": [
         {
           "icon_query": "i=python",
           "alt": "Python",
           "label": "Python"
-        },
-        {
-          "icon_query": "i=postgres&theme=dark",
-          "alt": "PostgreSQL",
-          "label": "PostgreSQL"
         },
         {
           "icon_query": "i=mysql&theme=dark",
@@ -102,36 +126,100 @@
           "icon_query": "i=java&theme=dark",
           "alt": "Java",
           "label": "Java"
-        }
-      ]
-    },
-    {
-      "title": "Interested In",
-      "items": [
-        {
-          "icon_query": "i=kotlin",
-          "alt": "Kotlin",
-          "label": "Kotlin"
-        },
-        {
-          "icon_query": "i=angular",
-          "alt": "Angular",
-          "label": "Angular"
-        },
-        {
-          "icon_query": "i=nodejs",
-          "alt": "NodeJS",
-          "label": "NodeJS"
-        },
-        {
-          "icon_query": "i=react&theme=dark",
-          "alt": "React",
-          "label": "ReactJS"
         },
         {
           "icon_query": "i=tailwind&theme=dark",
           "alt": "Tailwind",
           "label": "Tailwind"
+        },
+        {
+          "icon_query": "i=threejs",
+          "label": "Three.js"
+        },
+        {
+          "icon_query": "i=sentry",
+          "label": "Sentry"
+        },
+        {
+          "icon_query": "i=aws",
+          "label": "AWS (S3, SES)"
+        }
+      ]
+    },
+    {
+      "id": "interested",
+      "title": "Interested In",
+      "level": 1,
+      "items": [
+        {
+          "logo_url": "https://cdn.simpleicons.org/modelcontextprotocol/white",
+          "label": "MCP Servers"
+        },
+        {
+          "logo_mask": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/cpu.svg",
+          "label": "LLM APIs"
+        },
+        {
+          "logo_mask": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/robot.svg",
+          "label": "AI Agents"
+        },
+        {
+          "logo_mask": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/database-check.svg",
+          "label": "RAG"
+        },
+        {
+          "icon_query": "i=ruby",
+          "label": "RubyLLM"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/huggingface",
+          "label": "Hugging Face"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/ollama/white",
+          "label": "Ollama (IA local)"
+        }
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "Workflow",
+      "unit": "ferramentas",
+      "items": [
+        {
+          "logo_url": "https://cdn.simpleicons.org/clickup",
+          "label": "ClickUp"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/trello",
+          "label": "Trello"
+        },
+        {
+          "icon_query": "i=figma",
+          "label": "Figma"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/dbeaver/white",
+          "label": "DBeaver"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Amplified With",
+      "unit": "ferramentas",
+      "items": [
+        {
+          "logo_url": "https://cdn.simpleicons.org/claude",
+          "label": "Claude Code"
+        },
+        {
+          "logo_mask": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/openai.svg",
+          "label": "Codex"
+        },
+        {
+          "logo_url": "https://cdn.simpleicons.org/googlegemini",
+          "label": "Gemini"
         }
       ]
     }
