@@ -1,42 +1,22 @@
-function dispararConfete() {
-  var duration = 5 * 1000;
-  var animationEnd = Date.now() + duration;
-  var skew = 1;
-  
-  function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  function frame() {
-    var timeLeft = animationEnd - Date.now();
-    if (timeLeft <= 0) return;
+document.addEventListener('DOMContentLoaded', function () {
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  if (!themeToggle) return;
 
-    var ticks = Math.max(100, 300 * (timeLeft / duration)); // Reduzindo os ticks
-    skew = Math.max(0.8, skew - 0.001);
+  const root = document.documentElement;
+  themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'light'));
 
-    confetti({
-      particleCount: 2,
-      startVelocity: 0,
-      ticks: ticks,
-      origin: {
-        x: Math.random(),
-        y: (Math.random() * skew) - 0.2
-      },
-      colors: ['#ffffff'],
-      shapes: ['circle'],
-      gravity: randomInRange(0.4, 0.6),
-      scalar: randomInRange(0.4, 1),
-      drift: randomInRange(-0.4, 0.4)
-    });
+  themeToggle.addEventListener('click', function () {
+    const isLight = root.dataset.theme !== 'light';
+    const theme = isLight ? 'light' : 'dark';
 
-    setTimeout(() => requestAnimationFrame(frame), 100);
-  }
-
-  frame();
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    dispararConfete();
+    root.dataset.theme = theme;
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    try {
+      localStorage.setItem('portfolio-theme', theme);
+    } catch {}
+  });
 });
 
 function dispararConfeteEmCimaDaDiv(elementoClicado, comCorações = false) {
@@ -99,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   divsIconContainer.forEach(function(container) {
       container.addEventListener('click', function(event) {
+          if (reducedMotion.matches || typeof confetti !== 'function') return;
           const languageName = container.querySelector('.sectiontwo__language-name');
           const comCorações = languageName && languageName.classList.contains('with-heart');
 
@@ -108,12 +89,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const divIconContainer = document.querySelector('.glass-shine-effect-profile');
+document.addEventListener('DOMContentLoaded', function () {
+  const photoTrigger = document.querySelector('.glass-shine-effect-profile');
+  if (!photoTrigger) return;
 
-    divIconContainer.addEventListener('click', function(event) {
-      dispararEmojisNoProfile(event.currentTarget);
-    });
+  function updatePhotoTrigger() {
+    photoTrigger.disabled = reducedMotion.matches || typeof confetti !== 'function';
+  }
+
+  updatePhotoTrigger();
+  reducedMotion.addEventListener('change', updatePhotoTrigger);
+  photoTrigger.addEventListener('click', function () {
+    dispararEmojisNoProfile(photoTrigger);
+  });
 });
 
 function dispararEmojisNoProfile(elementoClicado) {
@@ -176,6 +164,8 @@ function dispararEmojisNoProfile(elementoClicado) {
 }
 
 function highlightButton(card) {
+  if (reducedMotion.matches) return;
+
   const button = card.querySelector('#project-btn');
 
   button.classList.add('highlight-btn');
@@ -212,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
               window.scrollTo({
                   top: accordionItem.getBoundingClientRect().top + window.scrollY - offset,
-                  behavior: 'smooth'
+                  behavior: reducedMotion.matches ? 'instant' : 'smooth'
               });
           }
       });
