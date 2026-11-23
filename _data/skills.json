@@ -1,0 +1,181 @@
+{
+  "technical": [
+    {
+      "title": "Experienced With",
+      "items": [
+        {
+          "icon_query": "i=rails",
+          "alt": "Ruby on Rails",
+          "label": "Rails",
+          "favorite": true
+        },
+        {
+          "icon_query": "i=vue&theme=dark",
+          "alt": "Vue",
+          "label": "VueJS",
+          "favorite": true
+        },
+        {
+          "icon_query": "i=bootstrap",
+          "alt": "Bootstrap",
+          "label": "Bootstrap",
+          "favorite": true
+        },
+        {
+          "icon_query": "i=sass",
+          "alt": "SASS",
+          "label": "Sass",
+          "favorite": true
+        },
+        {
+          "icon_query": "i=css",
+          "alt": "CSS",
+          "label": "CSS",
+          "favorite": true
+        },
+        {
+          "icon_query": "i=html",
+          "alt": "HTML",
+          "label": "HTML"
+        },
+        {
+          "icon_query": "i=ruby",
+          "alt": "Ruby",
+          "label": "Ruby"
+        },
+        {
+          "icon_query": "i=js",
+          "alt": "Javascript",
+          "label": "Javascript"
+        },
+        {
+          "icon_query": "i=git",
+          "alt": "Git",
+          "label": "Git"
+        },
+        {
+          "icon_query": "i=vscode&theme=dark",
+          "alt": "VSCode",
+          "label": "VSCode"
+        },
+        {
+          "icon_query": "i=docker&theme=dark",
+          "alt": "Docker",
+          "label": "Docker"
+        },
+        {
+          "icon_query": "i=windows&theme=dark",
+          "alt": "Windows",
+          "label": "Windows"
+        },
+        {
+          "icon_query": "i=linux&theme=dark",
+          "alt": "Linux",
+          "label": "Linux"
+        }
+      ]
+    },
+    {
+      "title": "Familiar With",
+      "items": [
+        {
+          "icon_query": "i=python",
+          "alt": "Python",
+          "label": "Python"
+        },
+        {
+          "icon_query": "i=postgres&theme=dark",
+          "alt": "PostgreSQL",
+          "label": "PostgreSQL"
+        },
+        {
+          "icon_query": "i=mysql&theme=dark",
+          "alt": "MySQL",
+          "label": "MySQL"
+        },
+        {
+          "icon_query": "i=php&theme=dark",
+          "alt": "PHP",
+          "label": "PHP"
+        },
+        {
+          "icon_query": "i=java&theme=dark",
+          "alt": "Java",
+          "label": "Java"
+        }
+      ]
+    },
+    {
+      "title": "Interested In",
+      "items": [
+        {
+          "icon_query": "i=kotlin",
+          "alt": "Kotlin",
+          "label": "Kotlin"
+        },
+        {
+          "icon_query": "i=angular",
+          "alt": "Angular",
+          "label": "Angular"
+        },
+        {
+          "icon_query": "i=nodejs",
+          "alt": "NodeJS",
+          "label": "NodeJS"
+        },
+        {
+          "icon_query": "i=react&theme=dark",
+          "alt": "React",
+          "label": "ReactJS"
+        },
+        {
+          "icon_query": "i=tailwind&theme=dark",
+          "alt": "Tailwind",
+          "label": "Tailwind"
+        }
+      ]
+    }
+  ],
+  "soft": [
+    {
+      "icon": "bi-lightbulb",
+      "label": "Criatividade"
+    },
+    {
+      "icon": "bi-tools",
+      "label": "Solução de problemas"
+    },
+    {
+      "icon": "bi-chat-dots",
+      "label": "Comunicação"
+    },
+    {
+      "icon": "bi-people",
+      "label": "Trabalho em equipe"
+    },
+    {
+      "icon": "bi-arrow-repeat",
+      "label": "Flexibilidade"
+    },
+    {
+      "icon": "bi-rocket-takeoff",
+      "label": "Proatividade"
+    },
+    {
+      "icon": "bi-list-check",
+      "label": "Organização"
+    },
+    {
+      "icon": "bi-shield-check",
+      "label": "Responsabilidade"
+    },
+    {
+      "icon": "bi-heart",
+      "label": "Empatia"
+    },
+    {
+      "icon": "bi-mortarboard",
+      "label": "Autodidata"
+    }
+  ]
+}

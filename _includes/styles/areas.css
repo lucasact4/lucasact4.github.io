@@ -1,0 +1,35 @@
+.areas-atuacao {
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.areas-atuacao .card {
+  cursor: crosshair;
+  background-image: url(../images/background3.png);
+  background-position: 50%;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: transform 0.3s;
+}
+.areas-atuacao .card:hover {
+  background-position: 100% 100%;
+  border: 1px solid rgb(0, 132, 255);
+  transform: scale(1.04);
+  letter-spacing: 0.2px;
+}
+.areas-atuacao .card .card-title {
+  color: #fff;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.areas-atuacao .card-body {
+  padding: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .areas-atuacao .card:hover {
+    transform: none;
+  }
+}

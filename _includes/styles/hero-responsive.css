@@ -1,0 +1,172 @@
+@media (min-width: 651px) and (max-width: 970px) {
+  .hero__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .72fr);
+    grid-template-areas: "intro intro" "details photo" "contacts contacts";
+    gap: 2rem 1.5rem;
+  }
+
+  .hero__photo {
+    margin-top: -3.75rem;
+  }
+
+  .hero__contacts {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .hero__contact {
+    font-size: .9375rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    width: calc(100% - 3rem);
+    padding-block: 1.5rem 2.75rem;
+    font-family: Manrope, "Segoe UI", sans-serif;
+  }
+
+  .hero__bar {
+    margin-bottom: 3rem;
+  }
+
+  .hero__handle {
+    font-size: .9375rem;
+    font-weight: 750;
+  }
+
+  .hero__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .69fr);
+    grid-template-areas: "intro photo" "details details" "contacts contacts";
+    align-items: center;
+    gap: 2rem 1rem;
+  }
+
+  .hero__intro {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+  }
+
+  .hero__name {
+    width: min-content;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: clamp(2.875rem, 16vw, 5.875rem);
+    font-weight: 700;
+    font-variation-settings: normal;
+    line-height: .87;
+    letter-spacing: -.032em;
+  }
+
+  .hero__role {
+    margin-top: 1rem;
+    padding-left: .5625rem;
+    border-left: 3px solid var(--color-accent);
+    font-size: .9375rem;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .hero__photo {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero__photo-frame {
+    --corner: 1.25rem;
+    --frame: .25rem;
+  }
+
+  .hero__details {
+    padding: 0;
+  }
+
+  .hero__bio {
+    max-width: 49ch;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero__actions {
+    margin-top: 1.5rem;
+  }
+
+  .hero__action {
+    flex: 1;
+    min-height: 48px;
+    padding-inline: .875rem;
+    border-radius: 0;
+    font-size: .875rem;
+    font-weight: 750;
+  }
+
+  .hero__action--primary {
+    flex-grow: 1.15;
+  }
+
+  .hero__contact-nav {
+    margin-top: .5rem;
+  }
+
+  .hero__contacts {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .hero__contacts li {
+    grid-column: span 2;
+  }
+
+  .hero__contacts li:nth-child(n+4) {
+    grid-column: span 3;
+  }
+
+  .hero__contacts li + li {
+    border-left: 1px solid var(--color-divider);
+  }
+
+  .hero__contacts li:nth-child(4) {
+    border-left: 0;
+  }
+
+  .hero__contact {
+    justify-content: flex-start;
+    padding-inline: .75rem;
+    font-size: .8125rem;
+  }
+
+  .hero__contact::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    flex: none;
+    background: var(--color-accent);
+  }
+
+  .hero__contact .bi {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero {
+    width: calc(100% - 2rem);
+  }
+
+  .hero__contact {
+    padding-inline: .5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__theme,
+  .hero__action,
+  .hero__contact {
+    transition: none;
+  }
+
+  .hero__theme:active,
+  .hero__action:active {
+    transform: none;
+  }
+}

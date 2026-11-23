@@ -1,0 +1,8 @@
+<a class="hero__contact" href="{{ include.contact.url | escape }}"{% if include.contact.new_tab %} target="_blank" rel="noopener"{% endif %}>
+    {{- include.contact.label | escape -}}
+    {% if include.contact.new_tab -%}
+    <span class="visually-hidden"> (abre em nova aba)</span><i class="bi bi-window-stack" aria-hidden="true"></i>
+    {%- else -%}
+    <i class="bi bi-envelope" aria-hidden="true"></i>
+    {%- endif %}
+</a>

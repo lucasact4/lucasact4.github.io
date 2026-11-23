@@ -1,0 +1,43 @@
+{
+  "name": "Lucas Santos",
+  "handle": "lucasact4",
+  "bio": "Trabalho com desenvolvimento e manutenção de sistemas web com Ruby on Rails e Vue.js. Nos meus projetos, aplico testes automatizados e desenvolvo interfaces para problemas reais.",
+  "photo": "images/lucas-ferreira.webp",
+  "resume": "https://lucasact4.github.io/Exercicios-ETE/HTML%20&%20CSS/Curr%C3%ADculo/",
+  "contacts": [
+    {
+      "tooltip": "LinkedIn",
+      "image": "images/linkedin.1a6177c4.svg",
+      "url": "https://www.linkedin.com/in/lucasact4/",
+      "label": "LinkedIn",
+      "new_tab": true
+    },
+    {
+      "tooltip": "GitHub",
+      "image": "images/github.5d2fc1ec.svg",
+      "url": "https://github.com/lucasact4",
+      "label": "GitHub",
+      "new_tab": true
+    },
+    {
+      "tooltip": "Email",
+      "image": "images/mail.fafae819.svg",
+      "url": "mailto:lucasact4@outlook.com",
+      "label": "E-mail"
+    },
+    {
+      "tooltip": "WhatsApp & Phone",
+      "image": "images/phone.0c554ea3.svg",
+      "url": "https://wa.me/+5581984414760",
+      "label": "WhatsApp",
+      "new_tab": true
+    },
+    {
+      "tooltip": "Currículo",
+      "image": "images/file-cv-svgrepo-com.svg",
+      "url": "https://drive.google.com/file/d/15d-OtkekneySGK6a99-bC1FraC6ulloH/view",
+      "label": "Currículo em PDF",
+      "new_tab": true
+    }
+  ]
+}

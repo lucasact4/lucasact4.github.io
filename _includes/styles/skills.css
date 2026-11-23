@@ -1,0 +1,92 @@
+.hard-skills {
+  border-radius: 0 0 12px 12px;
+  padding: 1.5rem 1.5rem 5px 1.5rem;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.hard-skills .sectiontwo__badges {
+  margin: 0 auto;
+}
+.hard-skills .sectiontwo__badges .sectiontwo__subtitle {
+  font-weight: 500;
+  border-bottom: 1px solid #a8a8a8;
+}
+.hard-skills .sectiontwo__icon-container {
+  cursor: pointer;
+  margin: 0 auto 2rem;
+  padding: 0.6rem;
+  display: inline-block;
+  position: relative;
+}
+.hard-skills .sectiontwo__language-icon {
+  transition: transform 1s;
+}
+.hard-skills .sectiontwo__language-icon:hover {
+  transform: rotateY(360deg);
+}
+.hard-skills .sectiontwo__language-icon:hover ~ .sectiontwo__language-name {
+  opacity: 1;
+}
+.hard-skills .sectiontwo__language-name {
+  color: #fff;
+  opacity: 0;
+  background-image: url(../images/background.png);
+  background-position: 50%;
+  border-radius: 8px;
+  padding: 2px 5px;
+  font-size: 1.1rem;
+  transition: opacity 0.3s, transform 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.hard-skills .with-heart {
+  display: flex;
+}
+.hard-skills .with-heart i {
+  color: red;
+  padding: 0 5px;
+}
+.hard-skills .with-heart i::before {
+  vertical-align: -0.2rem !important;
+}
+
+.soft-skills {
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.soft-skills .skill-button {
+  cursor: crosshair;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #a8a8a8;
+  border-radius: 25px;
+  margin: 0.5rem 3px;
+  padding: 12px 20px;
+  font-weight: 700;
+  background-position: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease-in-out, color 0s ease-in-out;
+}
+.soft-skills .skill-button:hover {
+  background-image: url(../images/background3.png);
+  background-position: 75%;
+  color: white;
+}
+.soft-skills .skill-button i::before {
+  vertical-align: -0.125rem !important;
+  padding: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hard-skills .sectiontwo__language-icon:hover {
+    transform: none;
+  }
+
+  .hard-skills .sectiontwo__language-name,
+  .soft-skills .skill-button {
+    transition: none;
+  }
+}

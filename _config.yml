@@ -1,0 +1,7 @@
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+strict_front_matter: true
+liquid:
+  error_mode: strict

@@ -1,0 +1,29 @@
+<section class="container mt-3">
+    <div class="bg-white-page executed-projects">
+        <h2 class="executed-projects__title text-center">Desafios Desenvolvidos</h2>
+        <div class="row justify-content-center">
+            {% for challenge in site.data.challenges %}
+            {% assign slug = challenge.title | slugify | prepend: 'desafio-' %}
+            <div class="col-md-4 mb-3">
+                <article class="project-card">
+                    {% include components/project-image.html item=challenge preview=true %}
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button id="{{ slug }}-botao" class="accordion-button-project collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ slug }}" aria-expanded="false" aria-controls="{{ slug }}">
+                                    <span class="card-title-challeng">{{ challenge.title | escape }}</span>
+                                </button>
+                            </h3>
+                            <div id="{{ slug }}" class="collapse" aria-labelledby="{{ slug }}-botao">
+                                <div class="accordion-body">
+                                    {% include components/project-details.html item=challenge %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

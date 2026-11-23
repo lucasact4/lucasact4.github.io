@@ -1,0 +1,37 @@
+{% assign profile = site.data.profile %}
+<header id="topo" class="hero">
+    <div class="hero__bar">
+        <a class="hero__handle" href="#topo"><span class="hero__mark" aria-hidden="true"></span>{{ profile.handle | escape }}</a>
+        <button class="hero__theme" type="button" data-theme-toggle aria-pressed="false">
+            <i class="bi bi-sun" aria-hidden="true"></i> Modo claro
+        </button>
+    </div>
+    <div class="hero__layout">
+        <div class="hero__intro">
+            <h1 class="hero__name">{{ profile.name | escape }}</h1>
+            <p class="hero__role">Desenvolvedor <span class="hero__specialty">full-stack</span></p>
+        </div>
+        <figure class="hero__photo">
+            <button class="hero__photo-trigger glass-shine-effect-profile" type="button" disabled>
+                <span class="hero__photo-frame">
+                    <img class="hero__image" src="{{ profile.photo | relative_url }}" width="800" height="1000" fetchpriority="high" alt="Foto de {{ profile.name | escape }}">
+                </span>
+                <span class="visually-hidden"> — ativar surpresa</span>
+            </button>
+        </figure>
+        <div class="hero__details">
+            <p class="hero__bio">{{ profile.bio | escape }}</p>
+            <div class="hero__actions">
+                <a href="#projetos" class="hero__action hero__action--primary"><i class="bi bi-grid-fill" aria-hidden="true"></i> Ver projetos</a>
+                <a href="{{ profile.resume | escape }}" class="hero__action" target="_blank" rel="noopener"><i class="bi bi-file-text" aria-hidden="true"></i> Currículo<span class="visually-hidden"> (abre em nova aba)</span></a>
+            </div>
+        </div>
+        <nav class="hero__contact-nav" aria-label="Contatos">
+            <ul class="hero__contacts">
+                {% for contact in profile.contacts %}
+                <li>{% include components/hero-contact.html contact=contact %}</li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

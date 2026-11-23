@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="bg-white-page hard-skills text-center">
+        <h2 class="skills__title">Technical Skills</h2>
+        <div class="sectiontwo__badges d-flex justify-content-center flex-column">
+            {% for group in site.data.skills.technical %}
+            <div{% if forloop.first %} class="mt-2"{% endif %}>
+                <span class="sectiontwo__subtitle">{{ group.title | escape }}</span>
+                <div>
+                    {% for skill in group.items %}
+                    <div class="sectiontwo__icon-container">
+                        <img src="https://skillicons.dev/icons?{{ skill.icon_query | escape }}" alt="{{ skill.alt | escape }}" class="sectiontwo__language-icon" width="48" height="48" loading="lazy">
+                        <span class="sectiontwo__language-name{% if skill.favorite %} with-heart{% endif %}">
+                            {{- skill.label | escape -}}
+                            {% if skill.favorite %}<i class="bi bi-suit-heart-fill" aria-hidden="true"></i>{% endif %}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

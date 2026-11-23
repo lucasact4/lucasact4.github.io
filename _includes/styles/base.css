@@ -1,0 +1,68 @@
+:root {
+  color-scheme: dark;
+  --color-background: #14262d;
+  --color-text: #f4f7f3;
+  --color-text-muted: #c1d0d1;
+  --color-divider: #40565a;
+  --color-border: #789094;
+  --color-hover: #20383e;
+  --color-accent: #f4ab83;
+  --color-accent-hover: #ffbf9a;
+  --color-on-accent: #281911;
+  --color-focus: #ffd3ba;
+  --color-link-hover: #ffd3ba;
+  --color-feature: #efa27a;
+  --color-on-feature: #241913;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-background: #edf4f5;
+  --color-text: #14262d;
+  --color-text-muted: #374e54;
+  --color-divider: #b5c7c9;
+  --color-border: #577279;
+  --color-hover: #ddebea;
+  --color-accent: #873e26;
+  --color-accent-hover: #71321c;
+  --color-on-accent: #fff8f2;
+  --color-focus: #873e26;
+  --color-link-hover: #873e26;
+  --color-feature: #f0ab88;
+  --color-on-feature: #241913;
+}
+
+.portfolio-page {
+  font-family: Roboto, sans-serif;
+  background-color: var(--color-background);
+}
+
+.portfolio-page hr.text-white {
+  border-top-color: var(--color-border);
+}
+
+#projetos {
+  scroll-margin-top: 1rem;
+}
+
+.bg-white-page {
+  max-width: 100%;
+  margin-inline: auto;
+  background-color: #f6f7f9;
+  text-align: center;
+  box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
+}
+
+.skills__title,
+.executed-projects__title,
+.areas-atuacao__title {
+  border-bottom: 1px solid #a8a8a8;
+  padding-bottom: 8px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.executed-projects__title,
+.areas-atuacao__title {
+  margin-bottom: 2rem;
+}

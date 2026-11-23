@@ -1,0 +1,66 @@
+.footer {
+  border-radius: 12px 12px 0 0;
+  margin: 1rem auto 0;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.footer a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.footer .footer__title {
+  border-top: 1px solid #a8a8a8;
+  margin: 0 auto;
+  padding-top: 12px;
+  font-size: 1rem;
+}
+.footer .footer__social-links {
+  list-style: none;
+  justify-content: center;
+  margin-top: 1rem;
+  display: flex;
+}
+.footer .footer__social-links li {
+  margin-right: 1rem;
+}
+.footer .footer__social-links li img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+.footer .footer__social-links li img:hover {
+  transform: scale(1.4);
+}
+.footer .footer__copy {
+  color: #000;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+/* Custom Tooltip */
+.custom-tooltip .tooltip-inner {
+  max-width: 500px;
+  padding: 0.5rem;
+  color: white;
+  border: 1px solid white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-style: normal;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.custom-tooltip.show {
+  opacity: 0.95;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer .footer__social-links li img:hover {
+    transform: none;
+  }
+
+  .custom-tooltip.show {
+    transition: none;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="card-body">
+    {% if include.item.credit %}
+    <p class="card-text1">{{ include.item.description | escape }}</p>
+    <p class="card-text2">
+        <i class="bi bi-file-earmark-code-fill" aria-hidden="true"></i>
+        <strong>Fonte:</strong> <em>{{ include.item.credit | escape }}</em> - {{ include.item.course | escape }}
+    </p>
+    {% else %}
+    <h3 class="card-title h5">{{ include.item.title | escape }}</h3>
+    <p class="card-text1">{{ include.item.description | escape }}</p>
+    <p class="card-text2">
+        <i class="bi bi-person-square" aria-hidden="true"></i>
+        <strong>Atribuições:</strong> {{ include.item.responsibilities | escape }}
+    </p>
+    {% endif %}
+    <p class="card-text3">
+        <i class="bi bi-stack" aria-hidden="true"></i>
+        <strong>Stacks:</strong> {{ include.item.stack | escape }}
+    </p>
+    <a href="{{ include.item.url | escape }}" class="btn btn-primary project-action" target="_blank" rel="noopener">
+        {%- if include.item.credit %}Acessar Desafio{% else %}Acessar Projeto{% endif -%}
+        <span class="visually-hidden"> (abre em nova aba)</span>
+    </a>
+</div>

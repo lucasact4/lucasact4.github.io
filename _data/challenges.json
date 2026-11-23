@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Social Page",
+    "description": "Página com Redes Sociais",
+    "credit": "Curso em Vídeo",
+    "course": "HTML5 & CSS3.",
+    "stack": "HTML, CSS, Design.",
+    "url": "https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/social/",
+    "image": "images/social.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "Android Page",
+    "description": "Página sobre o Android",
+    "credit": "Curso em Vídeo",
+    "course": "HTML5 & CSS3.",
+    "stack": "HTML, CSS.",
+    "url": "https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/android/",
+    "image": "images/android.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "Cordel Page",
+    "description": "Cordel moderno parallax",
+    "credit": "Curso em Vídeo",
+    "course": "HTML5 & CSS3.",
+    "stack": "HTML, CSS, Design.",
+    "url": "https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/cordel/",
+    "image": "images/cordel.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "Login Design Page",
+    "description": "Página login de Usuário",
+    "credit": "Curso em Vídeo",
+    "course": "HTML5 & CSS3.",
+    "stack": "HTML, CSS, Design, UX-UI.",
+    "url": "https://lucasact4.github.io/Cursos/Exercicios-HTML5-CSS3/mini-projetos/login/",
+    "image": "images/login.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "Simple Landing Page",
+    "description": "Landing Page moderna e simples",
+    "credit": "Luiz Otávio Miranda",
+    "course": "HTML5 & CSS3.",
+    "stack": "HTML, CSS, Design, UX-UI.",
+    "url": "https://lucasact4.github.io/Cursos/ReactJS/HTML5%20&%20CSS3/Landing%20Page/",
+    "image": "images/landing-page.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "React Search",
+    "description": "Buscador de cards",
+    "credit": "Luiz Otávio Miranda",
+    "course": "React.JS.",
+    "stack": "HTML, CSS, React.JS.",
+    "url": "https://vocal-bonbon-9ae370.netlify.app/",
+    "image": "images/react-search.png",
+    "width": 500,
+    "height": 250
+  },
+  {
+    "title": "Portinho Bot Page",
+    "description": "ChatBot para atendimento escolar",
+    "credit": "ETE Porto Digital",
+    "course": "Projeto Integrador",
+    "stack": "HTML, CSS, DialogFlow.",
+    "url": "https://lucasact4.github.io/Projects/Portinho/",
+    "image": "images/chatbot.png",
+    "width": 500,
+    "height": 250
+  }
+]
