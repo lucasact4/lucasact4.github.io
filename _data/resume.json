@@ -1,0 +1,157 @@
+{
+  "full_name": "Lucas Vitor Ferreira Santos",
+  "role": "Desenvolvedor full-stack",
+  "birthdate": "2003-05-19",
+  "location": "Abreu e Lima, PE",
+  "nationality": "Brasileira",
+  "birthplace": "Cajamar, SP",
+  "updated_at": "2026-11-23",
+  "pdf": "files/curriculo-lucas-santos.pdf",
+  "summary": "Desenvolvedor full-stack com experiência em Ruby on Rails e Vue.js. Desenvolvo e mantenho sistemas web em produção, com testes automatizados, revisão de código e foco em problemas reais de quem usa o sistema.",
+  "contacts": [
+    {
+      "label": "E-mail",
+      "value": "lucasact4@outlook.com",
+      "url": "mailto:lucasact4@outlook.com"
+    },
+    {
+      "label": "WhatsApp",
+      "value": "(81) 98441-4760",
+      "url": "https://wa.me/+5581984414760"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/lucasact4",
+      "url": "https://www.linkedin.com/in/lucasact4/"
+    },
+    {
+      "label": "GitHub",
+      "value": "github.com/lucasact4",
+      "url": "https://github.com/lucasact4"
+    },
+    {
+      "label": "Portfólio",
+      "value": "portfolio.lucasact4.com.br",
+      "url": "https://portfolio.lucasact4.com.br/"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Desenvolvedor full-stack",
+      "company": "Aponti",
+      "company_note": "antiga Softex Pernambuco",
+      "contract": "Bolsa",
+      "start": "2025-10",
+      "end": null,
+      "summary": "Desenvolvedor à frente do Bolsa Futuro Digital (BFD) e da Formação Acelerada em Programação (FAP), sistemas web em Ruby on Rails e Vue.js.",
+      "highlights": [
+        "Evolução do BFD, programa nacional de capacitação em TI, e da FAP: painel administrativo, inscrições, residências e comunicação com os participantes.",
+        "Publicação de resultados preliminares com geração de PDF e ranking por estado.",
+        "Emissão de certificados e selos para as empresas parceiras do BFD.",
+        "Desenvolvimento do novo site institucional da Aponti em Ruby on Rails."
+      ]
+    },
+    {
+      "role": "Desenvolvedor full-stack",
+      "company": "Propósito Digital",
+      "contract": "PJ",
+      "start": "2025-07",
+      "end": null,
+      "summary": "Desenvolvimento e manutenção de sistemas web em Ruby on Rails e Vue.js para clientes da área da saúde.",
+      "highlights": [
+        "LIS da Genesis Genomics, sistema laboratorial para análises genéticas: ordens de serviço de normalização de DNA, controle de amostras e pools.",
+        "SmartSUS: indicadores do SUS para Unidades Básicas de Saúde, construídos a partir das notas metodológicas do Ministério da Saúde.",
+        "Apresentação para o time sobre qualidade de código e experiência do usuário."
+      ]
+    },
+    {
+      "role": "Desenvolvedor full-stack",
+      "company": "Softex Pernambuco",
+      "contract": "Bolsa",
+      "start": "2023-02",
+      "end": "2025-10",
+      "summary": "Desenvolvimento e manutenção dos sistemas web dos programas de formação da instituição em Ruby on Rails e Vue.js.",
+      "highlights": [
+        "Desenvolvimento do Bolsa Futuro Digital (BFD): inscrições, permissões, landing pages por estado e e-mails.",
+        "Módulo de residência em empresas parceiras, com alocação de vagas que respeita as preferências dos participantes.",
+        "Funcionalidades da Formação Acelerada em Programação (FAP) na mesma plataforma.",
+        "Manutenção do Sistema de Gestão de Bolsas (SGB): e-mails, painel gerencial e PDFs de propostas."
+      ]
+    }
+  ],
+  "other_experience": [
+    {
+      "role": "Correspondente bancário",
+      "company": "Prima Pedra",
+      "start": "2021-02",
+      "end": "2021-09",
+      "summary": "Apoio administrativo no sistema bancário habitacional, atendimento a clientes e organização de documentos."
+    },
+    {
+      "role": "Jovem aprendiz",
+      "company": "Caixa Econômica Federal",
+      "company_note": "via CIEE",
+      "start": "2019-02",
+      "end": "2021-02",
+      "summary": "Digitalização e organização de arquivos e suporte em atendimentos."
+    }
+  ],
+  "education": [
+    {
+      "course": "Licenciatura em Computação",
+      "institution": "UFRPE",
+      "start": "2024-10",
+      "end": null,
+      "status": "Em andamento"
+    },
+    {
+      "course": "Técnico em Análise e Desenvolvimento de Sistemas",
+      "institution": "ETE Porto Digital",
+      "start": "2022-02",
+      "end": "2023-06",
+      "status": "Concluído"
+    }
+  ],
+  "courses": [
+    {
+      "course": "Aprendizagem em serviços bancários (teórico e prático)",
+      "institution": "CIEE",
+      "start": "2019-02",
+      "end": "2021-02",
+      "summary": "Formação profissional e comportamental do programa Jovem Aprendiz da Caixa Econômica Federal."
+    }
+  ],
+  "skills": [
+    "Ruby on Rails",
+    "Ruby",
+    "Vue.js",
+    "JavaScript",
+    "Hotwire",
+    "PostgreSQL",
+    "Redis",
+    "Sidekiq",
+    "RSpec",
+    "Capybara",
+    "Docker",
+    "Git",
+    "GitHub Actions",
+    "HTML",
+    "CSS/Sass",
+    "Bootstrap"
+  ],
+  "ai_tools": [
+    "Claude Code",
+    "Codex",
+    "Gemini"
+  ],
+  "languages": [
+    {
+      "name": "Português",
+      "level": "Nativo"
+    },
+    {
+      "name": "Inglês",
+      "level": "Intermediário: leitura e escrita; conversação em desenvolvimento"
+    }
+  ]
+}

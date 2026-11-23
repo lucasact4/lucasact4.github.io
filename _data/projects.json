@@ -20,16 +20,6 @@
     "height": 500
   },
   {
-    "title": "Curriculum Page",
-    "description": "Currículo com informações",
-    "responsibilities": "Design de imagens, layout, desenvolvimento e implementação.",
-    "stack": "HTML, CSS, Design, UX-UI.",
-    "url": "https://lucasact4.github.io/Exercicios-ETE/HTML%20&%20CSS/Curr%C3%ADculo/",
-    "image": "images/curriculo.png",
-    "width": 1000,
-    "height": 500
-  },
-  {
     "title": "Educational Website",
     "description": "Aula interativa para criação de uma página web",
     "responsibilities": "Aula interativa, layout, design, desenvolvimento básico, educação.",

@@ -1,0 +1,611 @@
+/* Trajetória (página principal) */
+.trajectory {
+  width: min(75rem, calc(100% - 6rem));
+  margin-inline: auto;
+  padding-block: 4rem 4.5rem;
+  color: var(--color-text);
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+.trajectory__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.trajectory__title,
+.resume__name,
+.resume-block__title {
+  font-family: "Bricolage Grotesque", "Source Sans 3", sans-serif;
+  font-variation-settings: "opsz" 72;
+  letter-spacing: -.03em;
+}
+
+.trajectory__title {
+  margin: 0;
+  font-size: clamp(2.5rem, 4.6vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.trajectory__actions,
+.resume__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.trajectory__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trajectory__item {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.trajectory__period {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.trajectory__role {
+  margin: 0 0 .375rem;
+  font-family: "Bricolage Grotesque", "Source Sans 3", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.trajectory__company {
+  color: var(--color-accent);
+}
+
+.trajectory__summary {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+/* Página do currículo */
+.resume-page {
+  width: min(62rem, calc(100% - 6rem));
+  margin-inline: auto;
+  padding-block: 2rem 4rem;
+  color: var(--color-text);
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+.resume-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.resume-bar__nav {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.resume-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 44px;
+  padding-inline: .5rem;
+  color: inherit;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.resume-bar__link:hover {
+  color: var(--color-link-hover);
+}
+
+.resume__head {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.resume__name {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: .95;
+}
+
+.resume__role {
+  margin: .75rem 0 1.25rem;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.resume__summary {
+  max-width: 62ch;
+  margin: 0 0 1.75rem;
+  color: var(--color-text-muted);
+  font-size: 1.1875rem;
+  line-height: 1.5;
+}
+
+.resume__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.75rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume__contacts a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.resume__contacts a:hover {
+  color: var(--color-link-hover);
+}
+
+.resume__contact-label {
+  margin-right: .375rem;
+  color: var(--color-text-muted);
+  font-size: .875rem;
+}
+
+.resume-block {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.resume-block__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resume-item + .resume-item {
+  margin-top: 1.75rem;
+}
+
+.resume-item__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "role period" "company period";
+  column-gap: 1.5rem;
+}
+
+.resume-item__role {
+  grid-area: role;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.resume-item__company {
+  grid-area: company;
+  margin: .125rem 0 0;
+  color: var(--color-accent);
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+
+.resume-item__note {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.resume-item__period {
+  grid-area: period;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.resume-item__summary {
+  max-width: 65ch;
+  margin: .625rem 0 0;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.resume-item__highlights {
+  max-width: 65ch;
+  margin: .625rem 0 0;
+  padding-left: 1.125rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.resume-item__highlights li + li {
+  margin-top: .25rem;
+}
+
+.resume-item__highlights li::marker {
+  color: var(--color-accent);
+}
+
+.resume-item__contract {
+  font-weight: 400;
+}
+
+.resume-minor {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-minor > li + li {
+  border-top: 1px solid var(--color-divider);
+}
+
+.resume-minor__item summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .5rem;
+  min-height: 44px;
+  padding-block: .625rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.resume-minor__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.resume-minor__item summary::before {
+  content: "+";
+  width: 1rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.resume-minor__item[open] summary::before {
+  content: "−";
+}
+
+.resume-minor__item summary:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.resume-minor__role {
+  font-weight: 650;
+}
+
+.resume-minor__company {
+  color: var(--color-text-muted);
+}
+
+.resume-minor__period {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: .9375rem;
+  font-weight: 600;
+}
+
+.resume-minor__summary {
+  margin: 0 0 .75rem 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.resume-list {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.resume-list + .resume-list {
+  margin-top: .75rem;
+}
+
+.resume-list__label {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.resume-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1rem 2rem;
+  margin: 0;
+}
+
+.resume-facts dt {
+  color: var(--color-text-muted);
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.resume-facts dd {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.resume__updated {
+  margin: 2rem 0 0;
+  color: var(--color-text-muted);
+  font-size: .9375rem;
+}
+
+.resume-page a:focus-visible,
+.resume-page button:focus-visible,
+.trajectory a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (max-width: 970px) {
+  .trajectory__item,
+  .resume-block {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .trajectory,
+  .resume-page {
+    width: calc(100% - 3rem);
+    font-family: Manrope, "Segoe UI", sans-serif;
+  }
+
+  .trajectory {
+    padding-block: 3rem;
+  }
+
+  .trajectory__title,
+  .trajectory__role,
+  .resume__name,
+  .resume-block__title {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-variation-settings: normal;
+    letter-spacing: -.02em;
+  }
+
+  .trajectory__title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .trajectory__actions,
+  .resume__actions {
+    width: 100%;
+  }
+
+  .trajectory__actions .hero__action,
+  .resume__actions .hero__action {
+    flex: 1 1 auto;
+  }
+
+  .trajectory__item {
+    padding-block: 1.25rem;
+  }
+
+  .trajectory__period {
+    font-size: .875rem;
+  }
+
+  .trajectory__role {
+    font-size: 1.5rem;
+  }
+
+  .trajectory__summary {
+    font-size: 1rem;
+  }
+
+  .resume-bar {
+    margin-bottom: 2rem;
+  }
+
+  .resume-bar__label {
+    display: none;
+  }
+
+  .resume-bar__link {
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .resume__name {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .resume__role {
+    font-size: 1.25rem;
+  }
+
+  .resume__summary {
+    font-size: 1.0625rem;
+  }
+
+  .resume__contacts {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .resume-block {
+    padding-block: 1.5rem;
+  }
+
+  .resume-item__head {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "role" "company" "period";
+  }
+
+  .resume-item__period {
+    margin-top: .25rem;
+    font-size: .875rem;
+    white-space: normal;
+  }
+
+  .resume-minor__period {
+    flex-basis: 100%;
+    margin-left: 1.5rem;
+    font-size: .875rem;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 11mm 13mm 10mm;
+  }
+
+  :root,
+  :root[data-theme="light"],
+  :root[data-theme="dark"] {
+    color-scheme: light;
+    --color-background: #fff;
+    --color-text: #14262d;
+    --color-text-muted: #374e54;
+    --color-divider: #c9d6d8;
+    --color-accent: #873e26;
+  }
+
+  .portfolio-page {
+    background: #fff;
+  }
+
+  .resume-bar,
+  .resume__actions {
+    display: none;
+  }
+
+  .resume-page {
+    width: 100%;
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  .resume__name {
+    font-size: 26pt;
+  }
+
+  .resume__role {
+    margin: 4pt 0 8pt;
+    font-size: 14pt;
+  }
+
+  .resume__summary,
+  .resume-item__summary,
+  .resume-list,
+  .resume-facts dd {
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+
+  .resume-item__highlights,
+  .resume-item__period,
+  .resume__updated {
+    font-size: 8.75pt;
+    line-height: 1.35;
+  }
+
+  .resume__head {
+    padding-bottom: 10pt;
+  }
+
+  .resume__contacts {
+    margin-top: 8pt;
+    gap: 2pt 14pt;
+  }
+
+  .resume__contacts a {
+    min-height: 0;
+    text-decoration: none;
+  }
+
+  .resume-block {
+    grid-template-columns: 30mm minmax(0, 1fr);
+    gap: 6mm;
+    padding-block: 6pt;
+    break-inside: avoid;
+  }
+
+  .resume-block__title {
+    font-size: 13pt;
+  }
+
+  .resume-item {
+    break-inside: avoid;
+  }
+
+  .resume-item + .resume-item {
+    margin-top: 6pt;
+  }
+
+  .resume-item__role {
+    font-size: 10.5pt;
+  }
+
+  .resume-item__company {
+    font-size: 9.5pt;
+  }
+
+  .resume__updated {
+    margin-top: 8pt;
+  }
+
+  .resume-minor__item summary {
+    min-height: 0;
+    padding-block: 2pt;
+    font-size: 10pt;
+  }
+
+  .resume-minor__item summary::before {
+    content: none;
+  }
+
+  .resume-minor__summary {
+    display: none;
+  }
+
+  .resume-minor__period {
+    font-size: 8.75pt;
+  }
+
+  .resume-item__summary,
+  .resume-item__highlights {
+    margin-top: 3pt;
+  }
+
+  .resume-facts {
+    gap: 4pt 12pt;
+  }
+}

@@ -1,0 +1,9 @@
+{%- comment -%}Idade calculada no build e atualizada no navegador por js/age.js.{%- endcomment -%}
+{%- assign birth = include.birthdate | split: "-" -%}
+{%- assign birth_year = birth[0] | plus: 0 -%}
+{%- assign birth_monthday = birth[1] | append: birth[2] | plus: 0 -%}
+{%- assign now_year = site.time | date: "%Y" | plus: 0 -%}
+{%- assign now_monthday = site.time | date: "%m%d" | plus: 0 -%}
+{%- assign age = now_year | minus: birth_year -%}
+{%- if now_monthday < birth_monthday -%}{%- assign age = age | minus: 1 -%}{%- endif -%}
+<span data-birthdate="{{ include.birthdate | escape }}">{{ age }} anos</span>
