@@ -2,8 +2,8 @@
   {
     "title": "SGU",
     "description": "Registro e acompanhamento de ocorrências no campus da UFRPE.",
-    "contribution": "Escrevi testes em RSpec para verificar como os relatos aparecem no mapa.",
-    "stack": "Rails · Hotwire · Tailwind CSS",
+    "contribution": "Liderei a equipe e escrevi a maior parte do código a partir do Rails Base atualizado.",
+    "stack": "Rails · Hotwire (Turbo e Stimulus) · Tailwind CSS",
     "image": "images/featured/sgu.webp",
     "alt": "Tela do SGU com o mapa interativo do campus da UFRPE",
     "width": 1120,
