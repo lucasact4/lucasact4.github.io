@@ -2,7 +2,7 @@
     <h2 id="tech-skills-title" class="tech-skills__title">Technical Skills</h2>
     {% assign level_max = 3 %}
     {% for group in site.data.skills.technical %}
-    <section class="tech-band tech-band--{{ group.id | escape }}" aria-labelledby="tech-band-{{ group.id | escape }}">
+    <section data-reveal class="tech-band tech-band--{{ group.id | escape }}" aria-labelledby="tech-band-{{ group.id | escape }}">
         <div class="tech-band__label">
             <h3 id="tech-band-{{ group.id | escape }}" class="tech-band__title">{{ group.title | escape }}</h3>
             <div class="tech-band__meta">

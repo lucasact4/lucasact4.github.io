@@ -1,0 +1,160 @@
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem clamp(.5rem, 1.6vw, 1.25rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__site-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: .3em;
+}
+
+.hero__site-nav a:hover,
+.hero__site-nav a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.hero__theme[aria-pressed="true"] {
+  border-color: var(--color-accent);
+}
+
+.hero__theme[aria-pressed="true"] .bi {
+  color: var(--color-accent);
+}
+
+.trajectory__period {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 760px) {
+  .hero__bar {
+    row-gap: .625rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__identity {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero__site-nav {
+    width: 100%;
+    padding-top: .25rem;
+    border-top: 1px solid var(--color-divider);
+  }
+
+  .hero__site-nav ul {
+    justify-content: space-between;
+  }
+
+  .hero__site-nav a {
+    font-size: .875rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-project-card:has(.portfolio-project-card__action):hover,
+  .challenge-card:hover {
+    border-color: var(--color-border);
+  }
+
+  .soft-skills .tech-chip:hover,
+  .tech-band .tech-chip:hover {
+    border-color: var(--color-border);
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .portfolio-page,
+  .hero__site-nav a,
+  .site-footer,
+  .site-footer a,
+  .resume-disclosure > summary {
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  :is(.hero__intro, .hero__details),
+  [data-reveal].is-visible,
+  .featured-projects__more[open] > :is(.featured-projects__grid, .featured-projects__upcoming),
+  .resume-disclosure[open] > .resume-disclosure__content {
+    animation: content-enter 360ms cubic-bezier(.2, .7, .3, 1);
+  }
+
+  .portfolio-project-card {
+    transition: background-color 180ms ease, border-color 180ms ease, box-shadow 200ms ease, transform 200ms ease;
+  }
+
+  .portfolio-project-card__cover img {
+    transition: transform 420ms cubic-bezier(.2, .7, .3, 1);
+  }
+
+  .portfolio-project-card__links a,
+  .featured-projects__more summary,
+  .challenge-card__toggle,
+  .challenge-card .project-action,
+  .tech-chip {
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+
+  .challenge-card__preview {
+    transition: max-height 240ms ease;
+  }
+
+  .challenge-card__toggle .bi,
+  .resume-disclosure > summary .bi,
+  .hero__theme .bi {
+    transition: transform 200ms ease, color 180ms ease;
+  }
+}
+
+@media screen and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .portfolio-project-card:has(.portfolio-project-card__action):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px -20px rgb(0 0 0 / 45%);
+  }
+
+  .portfolio-project-card:has(.portfolio-project-card__action):hover .portfolio-project-card__cover img {
+    transform: scale(1.035);
+  }
+
+  .hero__theme:hover .bi {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes content-enter {
+  from {
+    opacity: .65;
+    translate: 0 .5rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

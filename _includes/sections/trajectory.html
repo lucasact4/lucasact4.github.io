@@ -9,7 +9,7 @@
     </div>
     <ol class="trajectory__list">
         {% for item in resume.experience %}
-        <li class="trajectory__item">
+        <li data-reveal class="trajectory__item">
             <p class="trajectory__period">{% include components/resume-period.html item=item %}</p>
             <div>
                 <h3 class="trajectory__role">{{ item.role | escape }} <span class="trajectory__company">· {{ item.company | escape }}</span></h3>
@@ -18,7 +18,7 @@
         </li>
         {% endfor %}
         {% assign degree = resume.education | first %}
-        <li class="trajectory__item trajectory__item--education">
+        <li data-reveal class="trajectory__item trajectory__item--education">
             <p class="trajectory__period">{% include components/resume-period.html item=degree %}</p>
             <div>
                 <h3 class="trajectory__role">{{ degree.course | escape }} <span class="trajectory__company">· {{ degree.institution | escape }}</span></h3>

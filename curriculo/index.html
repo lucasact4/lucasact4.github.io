@@ -5,131 +5,157 @@ permalink: /curriculo/
 ---
 {% assign profile = site.data.profile %}
 {% assign resume = site.data.resume %}
+<a class="skip-link visually-hidden-focusable" href="#conteudo">Pular para o conteúdo</a>
 <div class="resume-page">
     <header class="resume-bar">
-        <a class="hero__handle" href="{{ '/' | relative_url }}"><span class="hero__mark" aria-hidden="true"></span>{{ profile.handle | escape }}</a>
-        <nav class="resume-bar__nav" aria-label="Página do currículo">
-            <a class="resume-bar__link" href="{{ '/' | relative_url }}" aria-label="Voltar ao portfólio"><i class="bi bi-arrow-left" aria-hidden="true"></i><span class="resume-bar__label">Portfólio</span></a>
-            <button class="hero__theme" type="button" data-theme-toggle aria-pressed="false">
-                <i class="bi bi-sun" aria-hidden="true"></i> Modo claro
-            </button>
-        </nav>
+        <a class="resume-bar__link" href="{{ '/' | relative_url }}" aria-label="Voltar ao portfólio">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i> Portfólio
+        </a>
+        <button class="hero__theme" type="button" data-theme-toggle aria-pressed="false">
+            <i class="bi bi-sun" aria-hidden="true"></i> Modo claro
+        </button>
     </header>
 
-    <main class="resume">
+    <main id="conteudo" class="resume" tabindex="-1">
         <header class="resume__head">
-            <h1 class="resume__name">{{ profile.name | escape }}</h1>
-            <p class="resume__role">{{ resume.role | escape }}</p>
-            <p class="resume__summary">{{ resume.summary | escape }}</p>
-            <div class="resume__actions">
-                <a class="hero__action hero__action--primary" href="{{ resume.pdf | relative_url }}" download><i class="bi bi-download" aria-hidden="true"></i> Baixar currículo em PDF</a>
+            <div>
+                <h1 class="resume__name">{{ profile.name | escape }}</h1>
+                <p class="resume__identity">
+                    <span class="resume__role">{{ resume.role | escape }}</span>
+                    <span class="resume__location">{{ resume.location | escape }}</span>
+                </p>
+                <p class="resume__summary">{{ resume.summary | escape }}</p>
             </div>
-            <ul class="resume__contacts" aria-label="Contatos">
-                {% for contact in resume.contacts %}
-                <li><span class="resume__contact-label">{{ contact.label | escape }}</span> <a href="{{ contact.url | escape }}">{{ contact.value | escape }}</a></li>
-                {% endfor %}
-            </ul>
+            <div class="resume__actions">
+                <a class="hero__action hero__action--primary" href="{{ resume.pdf | relative_url }}" download><i class="bi bi-download" aria-hidden="true"></i> Baixar PDF</a>
+                <a class="hero__action" href="#resume-contact">Contato</a>
+            </div>
         </header>
 
-        <section class="resume-block" aria-labelledby="resume-experience">
-            <h2 id="resume-experience" class="resume-block__title">Experiência</h2>
-            <div class="resume-block__body">
+        <div class="resume__layout">
+            <section class="resume-experience" aria-labelledby="resume-experience">
+                <h2 id="resume-experience">Experiência</h2>
                 {% for item in resume.experience %}
-                <article class="resume-item">
-                    <div class="resume-item__head">
-                        <h3 class="resume-item__role">{{ item.role | escape }}</h3>
-                        <p class="resume-item__company">{{ item.company | escape }}{% if item.company_note %} <span class="resume-item__note">· {{ item.company_note | escape }}</span>{% endif %}</p>
-                        <p class="resume-item__period">{% include components/resume-period.html item=item %}{% if item.contract %} <span class="resume-item__contract">· {{ item.contract | escape }}</span>{% endif %}</p>
+                <article class="resume-job">
+                    <div class="resume-job__head">
+                        <div>
+                            <h3>{{ item.company | escape }}</h3>
+                            <p class="resume-job__role">{{ item.role | escape }}</p>
+                        </div>
+                        <p class="resume__period">
+                            {% include components/resume-period.html item=item %}
+                            {% if item.contract %}<span> · {{ item.contract | escape }}</span>{% endif %}
+                        </p>
                     </div>
-                    <p class="resume-item__summary">{{ item.summary | escape }}</p>
+                    <p class="resume-job__summary">{{ item.overview | default: item.summary | escape }}</p>
                     {% if item.highlights %}
-                    <ul class="resume-item__highlights">
-                        {% for highlight in item.highlights %}<li>{{ highlight | escape }}</li>{% endfor %}
-                    </ul>
+                    <details class="resume-disclosure resume-job__details">
+                        <summary>Ver entregas<span class="visually-hidden"> em {{ item.company | escape }}</span> <i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="resume-disclosure__content">
+                            {% if item.company_note %}<p class="resume-job__note">{{ item.company | escape }} ({{ item.company_note | escape }})</p>{% endif %}
+                            <ul class="resume-job__highlights">
+                                {% for highlight in item.highlights %}<li>{{ highlight | escape }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                    </details>
                     {% endif %}
                 </article>
                 {% endfor %}
-            </div>
-        </section>
+            </section>
 
-        <section class="resume-block" aria-labelledby="resume-education">
-            <h2 id="resume-education" class="resume-block__title">Formação</h2>
-            <div class="resume-block__body">
-                {% for item in resume.education %}
-                <article class="resume-item resume-item--compact">
-                    <div class="resume-item__head">
-                        <h3 class="resume-item__role">{{ item.course | escape }}</h3>
-                        <p class="resume-item__company">{{ item.institution | escape }} <span class="resume-item__note">· {{ item.status | escape }}</span></p>
-                        <p class="resume-item__period">{% include components/resume-period.html item=item %}</p>
+            <div class="resume-sidebar">
+                <section aria-labelledby="resume-education">
+                    <h2 id="resume-education">Formação</h2>
+                    {% for item in resume.education %}
+                    <div class="resume-education__entry">
+                        <h3>{{ item.course | escape }}</h3>
+                        <p>{{ item.institution | escape }}</p>
+                        <p class="resume__period">{% include components/resume-period.html item=item %}</p>
                     </div>
-                </article>
-                {% endfor %}
-            </div>
-        </section>
+                    {% endfor %}
+                </section>
 
-        <section class="resume-block" aria-labelledby="resume-courses">
-            <h2 id="resume-courses" class="resume-block__title">Cursos</h2>
-            <div class="resume-block__body">
-                {% for item in resume.courses %}
-                <article class="resume-item resume-item--compact">
-                    <div class="resume-item__head">
-                        <h3 class="resume-item__role">{{ item.course | escape }}</h3>
-                        <p class="resume-item__company">{{ item.institution | escape }}</p>
-                        <p class="resume-item__period">{% include components/resume-period.html item=item %}</p>
-                    </div>
-                    <p class="resume-item__summary">{{ item.summary | escape }}</p>
-                </article>
-                {% endfor %}
-            </div>
-        </section>
+                <section aria-labelledby="resume-skills">
+                    <h2 id="resume-skills">Tecnologias</h2>
+                    {% assign initial_skills = 9 %}
+                    <ul class="resume-tags">
+                        {% for skill in resume.skills limit:initial_skills %}<li>{{ skill | escape }}</li>{% endfor %}
+                    </ul>
+                    {% if resume.skills.size > initial_skills %}
+                    <details class="resume-disclosure">
+                        <summary>Outras tecnologias <i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+                        <ul class="resume-disclosure__content resume-tags">
+                            {% for skill in resume.skills offset:initial_skills %}<li>{{ skill | escape }}</li>{% endfor %}
+                        </ul>
+                    </details>
+                    {% endif %}
+                </section>
 
-        <section class="resume-block" aria-labelledby="resume-skills">
-            <h2 id="resume-skills" class="resume-block__title">Habilidades</h2>
-            <div class="resume-block__body">
-                <p class="resume-list"><span class="resume-list__label">Stack principal</span> {{ resume.skills | join: " · " | escape }}</p>
-                <p class="resume-list"><span class="resume-list__label">Desenvolvimento com IA</span> {{ resume.ai_tools | join: " · " | escape }}</p>
-                {% assign soft_skills = site.data.skills.soft | map: "label" %}
-                <p class="resume-list"><span class="resume-list__label">Competências</span> {{ soft_skills | join: " · " | escape }}</p>
+                <section id="resume-contact" aria-labelledby="resume-contact-title">
+                    <h2 id="resume-contact-title">Contato</h2>
+                    <ul class="resume-contacts">
+                        {% for contact in resume.contacts %}
+                        {% unless contact.label == "Portfólio" %}
+                        <li>
+                            <a href="{{ contact.url | escape }}">
+                                {% if contact.label == "E-mail" %}{{ contact.value | escape }}{% else %}{{ contact.label | escape }}{% endif %}
+                            </a>
+                        </li>
+                        {% endunless %}
+                        {% endfor %}
+                    </ul>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <section class="resume-block resume-block--minor" aria-labelledby="resume-other">
-            <h2 id="resume-other" class="resume-block__title">Outras experiências</h2>
-            <div class="resume-block__body">
-                <ul class="resume-minor">
+        <details class="resume-disclosure resume-extra">
+            <summary>Mais informações <i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+            <div class="resume-disclosure__content resume-extra__grid">
+                <section aria-labelledby="resume-other">
+                    <h2 id="resume-other">Outras experiências</h2>
                     {% for item in resume.other_experience %}
-                    <li>
-                        <details class="resume-minor__item">
-                            <summary>
-                                <span class="resume-minor__role">{{ item.role | escape }}</span>
-                                <span class="resume-minor__company">· {{ item.company | escape }}</span>
-                                <span class="resume-minor__period">{% include components/resume-period.html item=item %}</span>
-                            </summary>
-                            <p class="resume-minor__summary">{{ item.summary | escape }}</p>
-                        </details>
-                    </li>
+                    <div class="resume-extra__entry">
+                        <h3>{{ item.role | escape }} · {{ item.company | escape }}</h3>
+                        <p class="resume__period">{% include components/resume-period.html item=item %}</p>
+                        <p>{{ item.summary | escape }}</p>
+                    </div>
                     {% endfor %}
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-block" aria-labelledby="resume-personal">
-            <h2 id="resume-personal" class="resume-block__title">Dados pessoais</h2>
-            <div class="resume-block__body">
-                <dl class="resume-facts">
-                    <div><dt>Nome completo</dt><dd>{{ resume.full_name | escape }}</dd></div>
-                    <div><dt>Idade</dt><dd>{% include components/age.html birthdate=resume.birthdate %}</dd></div>
-                    <div><dt>Localização</dt><dd>{{ resume.location | escape }}</dd></div>
-                    <div><dt>Nacionalidade</dt><dd>{{ resume.nationality | escape }}</dd></div>
-                    <div><dt>Naturalidade</dt><dd>{{ resume.birthplace | escape }}</dd></div>
-                    {% for language in resume.languages %}
-                    <div><dt>{{ language.name | escape }}</dt><dd>{{ language.level | escape }}</dd></div>
+                </section>
+                <section aria-labelledby="resume-courses">
+                    <h2 id="resume-courses">Cursos</h2>
+                    {% for item in resume.courses %}
+                    <div class="resume-extra__entry">
+                        <h3>{{ item.course | escape }}</h3>
+                        <p>{{ item.institution | escape }}</p>
+                        <p class="resume__period">{% include components/resume-period.html item=item %}</p>
+                        <p>{{ item.summary | escape }}</p>
+                    </div>
                     {% endfor %}
-                </dl>
+                </section>
+                <section aria-labelledby="resume-other-skills">
+                    <h2 id="resume-other-skills">Competências e idiomas</h2>
+                    {% assign soft_skills = site.data.skills.soft | map: "label" %}
+                    <dl class="resume-facts">
+                        {% for language in resume.languages %}
+                        <div><dt>{{ language.name | escape }}</dt><dd>{{ language.level | escape }}</dd></div>
+                        {% endfor %}
+                        <div><dt>Desenvolvimento com IA</dt><dd>{{ resume.ai_tools | join: " · " | escape }}</dd></div>
+                        <div><dt>Soft Skills</dt><dd>{{ soft_skills | join: " · " | escape }}</dd></div>
+                    </dl>
+                </section>
+                <section aria-labelledby="resume-personal">
+                    <h2 id="resume-personal">Dados pessoais</h2>
+                    <dl class="resume-facts">
+                        <div><dt>Nome completo</dt><dd>{{ resume.full_name | escape }}</dd></div>
+                        <div><dt>Idade</dt><dd>{% include components/age.html birthdate=resume.birthdate %}</dd></div>
+                        <div><dt>Nacionalidade</dt><dd>{{ resume.nationality | escape }}</dd></div>
+                        <div><dt>Naturalidade</dt><dd>{{ resume.birthplace | escape }}</dd></div>
+                    </dl>
+                </section>
             </div>
-        </section>
+        </details>
 
         {% assign updated = resume.updated_at | split: "-" %}
-        <p class="resume__updated">Última atualização: <time datetime="{{ resume.updated_at | escape }}">{{ updated[2] }}/{{ updated[1] }}/{{ updated[0] }}</time></p>
+        <p class="resume__updated">Atualizado em <time datetime="{{ resume.updated_at | escape }}">{{ updated[2] }}/{{ updated[1] }}/{{ updated[0] }}</time></p>
     </main>
 </div>

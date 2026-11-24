@@ -41,7 +41,7 @@
   border-top-color: var(--color-border);
 }
 
-#projetos {
+:is(#conteudo, #projetos, #trajetoria, #tech-skills-title, #contatos) {
   scroll-margin-top: 1rem;
 }
 

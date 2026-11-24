@@ -1,10 +1,20 @@
 {% assign profile = site.data.profile %}
 <header id="topo" class="hero">
     <div class="hero__bar">
-        <a class="hero__handle" href="#topo"><span class="hero__mark" aria-hidden="true"></span>{{ profile.handle | escape }}</a>
-        <button class="hero__theme" type="button" data-theme-toggle aria-pressed="false">
-            <i class="bi bi-sun" aria-hidden="true"></i> Modo claro
-        </button>
+        <div class="hero__identity">
+            <a class="hero__handle" href="#topo"><span class="hero__mark" aria-hidden="true"></span>{{ profile.handle | escape }}</a>
+            <button class="hero__theme" type="button" data-theme-toggle aria-pressed="false">
+                <i class="bi bi-sun" aria-hidden="true"></i> Modo claro
+            </button>
+        </div>
+        <nav class="hero__site-nav" aria-label="Seções do portfólio">
+            <ul>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#trajetoria">Trajetória</a></li>
+                <li><a href="#tech-skills-title">Habilidades</a></li>
+                <li><a href="#contatos">Contato</a></li>
+            </ul>
+        </nav>
     </div>
     <div class="hero__layout">
         <div class="hero__intro">

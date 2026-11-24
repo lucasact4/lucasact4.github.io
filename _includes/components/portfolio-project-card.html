@@ -1,4 +1,4 @@
-<article class="portfolio-project-card">
+<article class="portfolio-project-card"{% if include.reveal %} data-reveal{% endif %}>
     {% if include.project.image %}
     <div class="portfolio-project-card__cover">
         <img src="{{ include.project.image | relative_url }}" alt="{{ include.project.alt | escape }}" width="{{ include.project.width }}" height="{{ include.project.height }}" loading="lazy">

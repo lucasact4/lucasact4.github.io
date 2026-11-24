@@ -15,13 +15,12 @@
 }
 
 .challenge-card__preview {
-  height: 4rem;
+  max-height: 4rem;
   overflow: hidden;
   border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
 }
 
 .challenge-card.is-expanded .challenge-card__preview {
-  height: auto;
   max-height: 11rem;
 }
 

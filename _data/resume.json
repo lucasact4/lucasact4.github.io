@@ -7,7 +7,7 @@
   "birthplace": "Cajamar, SP",
   "updated_at": "2026-11-23",
   "pdf": "files/curriculo-lucas-santos.pdf",
-  "summary": "Desenvolvedor full-stack com experiência em Ruby on Rails e Vue.js. Desenvolvo e mantenho sistemas web em produção, com testes automatizados, revisão de código e foco em problemas reais de quem usa o sistema.",
+  "summary": "Desenvolvo sistemas web com Ruby on Rails e Vue.js para formação profissional e saúde.",
   "contacts": [
     {
       "label": "E-mail",
@@ -44,6 +44,7 @@
       "start": "2025-10",
       "end": null,
       "summary": "Desenvolvedor à frente do Bolsa Futuro Digital (BFD) e da Formação Acelerada em Programação (FAP), sistemas web em Ruby on Rails e Vue.js.",
+      "overview": "Desenvolvo funcionalidades para o Bolsa Futuro Digital (BFD) e a Formação Acelerada em Programação (FAP).",
       "highlights": [
         "Evolução do BFD, programa nacional de capacitação em TI, e da FAP: painel administrativo, inscrições, residências e comunicação com os participantes.",
         "Publicação de resultados preliminares com geração de PDF e ranking por estado.",
@@ -58,6 +59,7 @@
       "start": "2025-07",
       "end": null,
       "summary": "Desenvolvimento e manutenção de sistemas web em Ruby on Rails e Vue.js para clientes da área da saúde.",
+      "overview": "Trabalho em um sistema laboratorial e em painéis de indicadores do SUS.",
       "highlights": [
         "LIS da Genesis Genomics, sistema laboratorial para análises genéticas: ordens de serviço de normalização de DNA, controle de amostras e pools.",
         "SmartSUS: indicadores do SUS para Unidades Básicas de Saúde, construídos a partir das notas metodológicas do Ministério da Saúde.",
@@ -71,6 +73,7 @@
       "start": "2023-02",
       "end": "2025-10",
       "summary": "Desenvolvimento e manutenção dos sistemas web dos programas de formação da instituição em Ruby on Rails e Vue.js.",
+      "overview": "Desenvolvi fluxos de inscrição e residência do BFD e mantive o Sistema de Gestão de Bolsas.",
       "highlights": [
         "Desenvolvimento do Bolsa Futuro Digital (BFD): inscrições, permissões, landing pages por estado e e-mails.",
         "Módulo de residência em empresas parceiras, com alocação de vagas que respeita as preferências dos participantes.",

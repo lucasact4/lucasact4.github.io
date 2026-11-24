@@ -10,3 +10,4 @@ layout: null
 {% include styles/resume.css %}
 {% include styles/projects.css %}
 {% include styles/footer.css %}
+{% include styles/interactions.css %}
