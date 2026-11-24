@@ -1,0 +1,27 @@
+<article class="portfolio-project-card">
+    {% if include.project.image %}
+    <div class="portfolio-project-card__cover">
+        <img src="{{ include.project.image | relative_url }}" alt="{{ include.project.alt | escape }}" width="{{ include.project.width }}" height="{{ include.project.height }}" loading="lazy">
+    </div>
+    {% else %}
+    <div class="portfolio-project-card__cover portfolio-project-card__cover--illustration" aria-hidden="true">
+        <i class="bi {{ include.project.icon | escape }}"></i>
+    </div>
+    {% endif %}
+
+    <div class="portfolio-project-card__body">
+        <h3>{{ include.project.title | escape }}</h3>
+        <p>{{ include.project.description | escape }}</p>
+        {% if include.project.contribution %}
+        <p class="portfolio-project-card__contribution">{{ include.project.contribution | escape }}</p>
+        {% endif %}
+        <p class="portfolio-project-card__stack">{{ include.project.stack | escape }}</p>
+
+        <div class="portfolio-project-card__links">
+            <a class="portfolio-project-card__action" href="{{ include.project.url | escape }}">{{ include.project.action | default: "Ver projeto" | escape }}<span class="visually-hidden"> · {{ include.project.title | escape }}</span></a>
+            {% if include.project.source %}
+            <a href="{{ include.project.source | escape }}">Código<span class="visually-hidden"> · {{ include.project.title | escape }}</span></a>
+            {% endif %}
+        </div>
+    </div>
+</article>

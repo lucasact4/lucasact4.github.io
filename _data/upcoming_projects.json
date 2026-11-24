@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Seu Espaço",
+    "description": "Plataforma para gestão de negócios de beleza, começando pelas barbearias.",
+    "status": "Em desenvolvimento · Projeto privado"
+  },
+  {
+    "title": "Minha Feira",
+    "description": "App para guardar listas de supermercado e comparar os gastos de um mês para outro.",
+    "status": "Planejado"
+  },
+  {
+    "title": "Agenda Fitness",
+    "description": "Agenda, pacotes de aulas, reposições e cobranças para personal trainers e pequenos estúdios.",
+    "status": "Em estudo"
+  }
+]

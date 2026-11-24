@@ -1,7 +1,7 @@
 [
   {
     "title": "Social Page",
-    "description": "Página com Redes Sociais",
+    "description": "Página de links para redes sociais.",
     "credit": "Curso em Vídeo",
     "course": "HTML5 & CSS3.",
     "stack": "HTML, CSS, Design.",
@@ -12,7 +12,7 @@
   },
   {
     "title": "Android Page",
-    "description": "Página sobre o Android",
+    "description": "Página sobre a história do Android.",
     "credit": "Curso em Vídeo",
     "course": "HTML5 & CSS3.",
     "stack": "HTML, CSS.",
@@ -23,7 +23,7 @@
   },
   {
     "title": "Cordel Page",
-    "description": "Cordel moderno parallax",
+    "description": "Cordel moderno com efeito parallax.",
     "credit": "Curso em Vídeo",
     "course": "HTML5 & CSS3.",
     "stack": "HTML, CSS, Design.",
@@ -34,7 +34,7 @@
   },
   {
     "title": "Login Design Page",
-    "description": "Página login de Usuário",
+    "description": "Tela de login.",
     "credit": "Curso em Vídeo",
     "course": "HTML5 & CSS3.",
     "stack": "HTML, CSS, Design, UX-UI.",
@@ -45,7 +45,7 @@
   },
   {
     "title": "Simple Landing Page",
-    "description": "Landing Page moderna e simples",
+    "description": "Landing page de um exercício de HTML e CSS.",
     "credit": "Luiz Otávio Miranda",
     "course": "HTML5 & CSS3.",
     "stack": "HTML, CSS, Design, UX-UI.",
@@ -56,7 +56,7 @@
   },
   {
     "title": "React Search",
-    "description": "Buscador de cards",
+    "description": "Busca de cards em React.",
     "credit": "Luiz Otávio Miranda",
     "course": "React.JS.",
     "stack": "HTML, CSS, React.JS.",
@@ -67,7 +67,7 @@
   },
   {
     "title": "Portinho Bot Page",
-    "description": "ChatBot para atendimento escolar",
+    "description": "Chatbot para atendimento escolar.",
     "credit": "ETE Porto Digital",
     "course": "Projeto Integrador",
     "stack": "HTML, CSS, DialogFlow.",

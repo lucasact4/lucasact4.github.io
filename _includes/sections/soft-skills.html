@@ -1,15 +1,11 @@
-<section class="container mt-3">
-    <div class="bg-white-page soft-skills text-center">
-        <h2 class="skills__title">Soft Skills</h2>
-        <div class="row">
-            <div class="col-md-12 p-3">
-                {% for skill in site.data.skills.soft %}
-                <button type="button" class="skill-button">
-                    <i class="bi {{ skill.icon | escape }}" aria-hidden="true"></i>
-                    {{ skill.label | escape }}
-                </button>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+<section class="soft-skills" aria-labelledby="soft-skills-title">
+    <h2 id="soft-skills-title" class="soft-skills__title">Soft Skills</h2>
+    <ul class="tech-band__list">
+        {% for skill in site.data.skills.soft %}
+        <li class="tech-chip">
+            <i class="bi {{ skill.icon | escape }}" aria-hidden="true"></i>
+            <span class="tech-chip__name">{{ skill.label | escape }}</span>
+        </li>
+        {% endfor %}
+    </ul>
 </section>

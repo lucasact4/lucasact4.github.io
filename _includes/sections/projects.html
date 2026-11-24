@@ -1,15 +1,35 @@
-<section id="projetos" class="container mt-3">
-    <div class="bg-white-page executed-projects">
-        <h2 class="executed-projects__title text-center">Projetos Desenvolvidos</h2>
-        <div class="row justify-content-center">
+<section id="projetos" class="featured-projects" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="featured-projects__title">Projetos</h2>
+
+    <div class="featured-projects__grid">
+        {% for project in site.data.featured_projects %}
+        {% include components/portfolio-project-card.html project=project %}
+        {% endfor %}
+    </div>
+
+    <details class="featured-projects__more">
+        <summary>Mais projetos</summary>
+        <div class="featured-projects__grid">
             {% for project in site.data.projects %}
-            <div class="col-md-4 mb-3">
-                <article class="project-card">
-                    {% include components/project-image.html item=project %}
-                    {% include components/project-details.html item=project %}
-                </article>
-            </div>
+            {% include components/portfolio-project-card.html project=project %}
             {% endfor %}
         </div>
-    </div>
+
+        <section class="featured-projects__upcoming" aria-labelledby="upcoming-projects-title">
+            <h3 id="upcoming-projects-title">Em breve</h3>
+            <div class="featured-projects__grid">
+                {% for project in site.data.upcoming_projects %}
+                <article class="portfolio-project-card">
+                    <div class="portfolio-project-card__body">
+                        <h4>{{ project.title | escape }}</h4>
+                        <p>{{ project.description | escape }}</p>
+                        <p class="portfolio-project-card__status">{{ project.status | escape }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </details>
+
+    {% include sections/challenges.html %}
 </section>

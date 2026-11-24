@@ -1,19 +1,14 @@
 ---
 layout: default
 ---
+<a class="skip-link visually-hidden-focusable" href="#conteudo">Pular para o conteúdo</a>
 {% include sections/hero.html %}
-<main>
-    {% include sections/technical-skills.html %}
-    <hr class="text-white">
-    {% include sections/soft-skills.html %}
+<main id="conteudo" tabindex="-1">
+    {% include sections/projects.html %}
     <hr class="text-white">
     {% include sections/trajectory.html %}
     <hr class="text-white">
-    {% include sections/projects.html %}
-    <hr class="text-white">
-    {% include sections/challenges.html %}
-    <hr class="text-white">
-    {% include sections/areas.html %}
+    {% include sections/technical-skills.html %}
+    {% include sections/soft-skills.html %}
 </main>
-<hr class="text-white">
 {% include sections/footer.html %}

@@ -1,163 +1,108 @@
-.executed-projects {
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
-}
-.executed-projects .project-card {
-  background-color: #fff;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-}
-.executed-projects .project-card .img-executed-challenge {
-  overflow: hidden;
-  height: 50px;
-  position: relative;
-  transition: height 0.5s ease-in-out;
-}
-.executed-projects .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.384);
-}
-.executed-projects .project-card:hover .glass-shine-effect:before {
-  transition: left 600ms ease;
-  left: 700px;
-}
-.executed-projects .project-card.is-expanded .img-executed-challenge {
-  height: 167px;
+.featured-projects__more + .featured-projects__more {
+  margin-top: .75rem;
 }
 
-.executed-projects .project-card .card-img-top {
+.challenge-grid {
+  align-items: start;
+  grid-auto-rows: auto;
+}
+
+.challenge-card {
+  min-width: 0;
+  border: 1px solid var(--color-divider);
+  border-radius: .75rem;
+  background-color: var(--color-hover);
+}
+
+.challenge-card__preview {
+  height: 4rem;
+  overflow: hidden;
+  border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
+}
+
+.challenge-card.is-expanded .challenge-card__preview {
   height: auto;
-  border-radius: 12px 12px 0 0;
-}
-.executed-projects .project-card .card-body {
-  padding: 1.5rem;
-}
-.executed-projects .project-card .card-body .card-text1 {
-  opacity: 0.7;
-  border-bottom: 1px solid #a8a8a8;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-.executed-projects .project-card .card-body .card-text2 {
-  text-align: left;
-  opacity: 0.9;
-}
-.executed-projects .project-card .card-body .card-text3 {
-  opacity: 0.9;
-  text-align: justify;
-  font-size: 1rem;
-}
-.executed-projects .project-card .card-body .btn {
-  background-image: url(../images/background.png);
-  background-position: 50%;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-.executed-projects .project-card .card-body .btn:hover {
-  background-position: 80%;
-  border: 1px solid rgb(0, 132, 255);
-  transform: scale(1.02);
-  letter-spacing: 0.1px;
+  max-height: 11rem;
 }
 
-.accordion {
-  border: none;
-  border-radius: 12px !important;
-}
-.accordion .accordion-item .card-title-challeng {
-  font-size: 14px;
-  z-index: 100;
-}
-.accordion .accordion-item:last-of-type {
-  border-bottom-right-radius: 12px !important;
-  border-bottom-left-radius: 12px !important;
-}
-.accordion .accordion-item .accordion-button-project {
-  position: relative;
-  display: flex;
-  align-items: center;
+.challenge-card__preview img {
+  display: block;
   width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
-  text-align: center;
-  background-color: var(--bs-accordion-btn-bg);
+  height: auto;
+}
+
+.challenge-card__title {
+  margin: 0;
+}
+
+.challenge-card__toggle {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .625rem .875rem;
   border: 0;
-  border-radius: 0 0 12px 12px !important;
-  overflow-anchor: none;
-  transition: var(--bs-accordion-transition);
-}
-.accordion .accordion-item .accordion-button-project::after {
-  width: var(--bs-accordion-btn-icon-width);
-  height: var(--bs-accordion-btn-icon-width);
-  content: "";
-  margin-left: auto;
-  background-image: url(../images/chevron-compact-down.svg);
-  background-repeat: no-repeat;
-  background-size: var(--bs-accordion-btn-icon-width);
-  transition: var(--bs-accordion-btn-icon-transition);
-}
-.accordion .accordion-item .accordion-button-project:not(.collapsed)::after {
-  transform: var(--bs-accordion-btn-icon-transform);
-}
-.accordion .accordion-item:first-of-type {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.accordion .accordion-item .accordion-body {
-  padding: 0 !important;
-}
-.accordion .accordion-item .accordion-body .card-body {
-  padding: 2px 12px 12px 12px !important;
+  border-top: 1px solid var(--color-divider);
+  border-radius: 0 0 calc(.75rem - 1px) calc(.75rem - 1px);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
 }
 
-.glass-shine-effect {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  position: relative;
-  transition: transform 200ms ease;
-  overflow: hidden;
-  border-radius: 12px 12px 0 0;
+.challenge-card__toggle:hover {
+  color: var(--color-accent);
 }
-.glass-shine-effect:before {
-  content: "";
-  position: absolute;
-  height: 150%;
-  width: 100px;
-  transform: rotate(30deg);
-  background-color: rgba(255, 255, 255, 0.2);
-  left: -200px;
+
+.challenge-card__toggle .bi {
+  color: var(--color-accent);
+}
+
+.challenge-card__toggle[aria-expanded="true"] .bi {
+  transform: rotate(180deg);
+}
+
+.challenge-card .card-body {
+  display: grid;
+  gap: .5rem;
+  padding: .25rem .875rem 1rem;
+}
+
+.challenge-card .card-body p {
+  margin: 0;
+}
+
+.challenge-card .card-text2,
+.challenge-card .card-text3 {
+  color: var(--color-text-muted);
+  font-size: .9375rem;
+}
+
+.challenge-card .project-action {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  margin-top: .375rem;
+  border: 0;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 700;
+}
+
+.challenge-card .project-action:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-on-accent);
+}
+
+.challenge-card :is(button, a):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 .project-action.highlight-btn {
-  transform: scale(1.1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .executed-projects .project-card,
-  .executed-projects .project-card .img-executed-challenge,
-  .executed-projects .project-card .card-body .btn {
-    transition: none;
-  }
-
-  .executed-projects .project-card:hover,
-  .executed-projects .project-card .card-body .btn:hover {
-    transform: none;
-  }
-
-  .executed-projects .project-card:hover .glass-shine-effect::before {
-    transition: none;
-  }
+  transform: scale(1.04);
 }

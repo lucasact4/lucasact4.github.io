@@ -45,24 +45,18 @@
   scroll-margin-top: 1rem;
 }
 
-.bg-white-page {
-  max-width: 100%;
-  margin-inline: auto;
-  background-color: #f6f7f9;
-  text-align: center;
-  box-shadow: 0 10px 10px -5px #0006, 0 0 10px #0006;
-}
-
-.skills__title,
-.executed-projects__title,
-.areas-atuacao__title {
-  border-bottom: 1px solid #a8a8a8;
-  padding-bottom: 8px;
-  font-size: 1.7rem;
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  inset-block-start: .75rem;
+  inset-inline-start: .75rem;
+  padding: .75rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
   font-weight: 700;
 }
 
-.executed-projects__title,
-.areas-atuacao__title {
-  margin-bottom: 2rem;
+.skip-link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
 }

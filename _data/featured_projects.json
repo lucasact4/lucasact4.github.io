@@ -1,0 +1,35 @@
+[
+  {
+    "title": "SGU",
+    "description": "Registro e acompanhamento de ocorrências no campus da UFRPE.",
+    "contribution": "Escrevi testes em RSpec para verificar como os relatos aparecem no mapa.",
+    "stack": "Rails · Hotwire · Tailwind CSS",
+    "image": "images/featured/sgu.webp",
+    "alt": "Tela do SGU com o mapa interativo do campus da UFRPE",
+    "width": 1120,
+    "height": 700,
+    "url": "https://sgu.lucasact4.com.br/mural/mapa?locale=pt-br",
+    "action": "Explorar o mapa",
+    "source": "https://github.com/lucasact4/engenharia-de-software"
+  },
+  {
+    "title": "Planta Casa",
+    "description": "Planta interativa e maquete 3D de uma casa.",
+    "stack": "Vue · Three.js",
+    "image": "images/featured/planta-casa.webp",
+    "alt": "Maquete aberta da casa com os cômodos identificados",
+    "width": 820,
+    "height": 460,
+    "url": "https://portfolio.lucasact4.com.br/planta-casa/modelo-3d.html",
+    "action": "Explorar em 3D",
+    "source": "https://github.com/lucasact4/planta-casa"
+  },
+  {
+    "title": "TodoAcademic",
+    "description": "Aplicativo desktop para organizar tarefas acadêmicas.",
+    "stack": "Java Swing",
+    "url": "https://github.com/lucasact4/todo-academic",
+    "action": "Ver código",
+    "icon": "bi-window-stack"
+  }
+]

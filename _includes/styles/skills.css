@@ -1,10 +1,14 @@
 /* Technical Skills */
-.tech-skills {
+.tech-skills,
+.soft-skills {
   width: min(75rem, calc(100% - 6rem));
   margin-inline: auto;
-  padding-block: 4rem 4.5rem;
   color: var(--color-text);
   font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+.tech-skills {
+  padding-block: 4rem 4.5rem;
 }
 
 .tech-skills__title {
@@ -138,8 +142,12 @@
 }
 
 @media (max-width: 650px) {
-  .tech-skills {
+  .tech-skills,
+  .soft-skills {
     width: calc(100% - 3rem);
+  }
+
+  .tech-skills {
     padding-block: 3rem;
     font-family: Manrope, "Segoe UI", sans-serif;
   }
@@ -196,36 +204,21 @@
 }
 
 .soft-skills {
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
-}
-.soft-skills .skill-button {
-  cursor: crosshair;
-  color: #000;
-  background-color: #ffffff;
-  border: 1px solid #a8a8a8;
-  border-radius: 25px;
-  margin: 0.5rem 3px;
-  padding: 12px 20px;
-  font-weight: 700;
-  background-position: 50%;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease-in-out, color 0s ease-in-out;
-}
-.soft-skills .skill-button:hover {
-  background-image: url(../images/background3.png);
-  background-position: 75%;
-  color: white;
-}
-.soft-skills .skill-button i::before {
-  vertical-align: -0.125rem !important;
-  padding: 3px;
+  padding-bottom: clamp(2.25rem, 4vw, 3.5rem);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .soft-skills .skill-button {
-    transition: none;
-  }
+.soft-skills__title {
+  margin: 0 0 .875rem;
+  font-family: "Bricolage Grotesque", "Source Sans 3", sans-serif;
+  font-size: clamp(1.625rem, 3vw, 2.125rem);
+  font-weight: 750;
+  line-height: 1.1;
+}
+
+.soft-skills .tech-chip {
+  background-color: var(--color-hover);
+}
+
+.soft-skills .bi {
+  color: var(--color-accent);
 }

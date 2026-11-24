@@ -1,22 +1,27 @@
-<footer class="container mt-3">
+<footer id="contatos" class="site-footer" aria-labelledby="footer-title">
     {% assign profile = site.data.profile %}
-    <div class="bg-white-page footer">
-        <div class="row">
-            <a href="#topo" class="back-to-top pt-3 text-center"><i class="bi bi-arrow-bar-up" aria-hidden="true"></i> Voltar ao topo <i class="bi bi-arrow-bar-up" aria-hidden="true"></i></a>
-            <div class="col-md-12 mt-3">
-                <h2 class="footer__title text-center">CONTATOS</h2>
-                <ul class="footer__social-links">
+    <div class="site-footer__inner">
+        <div class="site-footer__main">
+            <div>
+                <h2 id="footer-title">Contato</h2>
+                <p class="site-footer__name">{{ profile.name | escape }}</p>
+            </div>
+            <nav aria-label="Links de contato">
+                <ul class="site-footer__links">
                     {% for contact in profile.contacts %}
-                    <li data-bs-placement="top" data-bs-toggle="tooltip" title="{{ contact.tooltip | escape }}">
+                    <li>
                         <a href="{{ contact.url | escape }}"{% if contact.new_tab %} target="_blank" rel="noopener"{% endif %}>
-                            <img src="{{ contact.image | relative_url }}" alt="{{ contact.label | escape }}" width="30" height="30" loading="lazy">
+                            {{- contact.label | escape -}}
                             {% if contact.new_tab %}<span class="visually-hidden"> (abre em nova aba)</span>{% endif %}
                         </a>
                     </li>
                     {% endfor %}
                 </ul>
-                <p class="footer__copy mb-0">© {{ profile.handle | escape }} - 2024 Todos os direitos reservados.</p>
-            </div>
+            </nav>
+        </div>
+        <div class="site-footer__bottom">
+            <small>© {{ site.time | date: "%Y" }} {{ profile.name | escape }}</small>
+            <a href="#topo">Voltar ao topo</a>
         </div>
     </div>
 </footer>
